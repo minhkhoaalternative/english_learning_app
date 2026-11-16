@@ -1,0 +1,17 @@
+# Generated static deployment
+dist/
+
+# Local dependencies, logs and tools
+node_modules/
+*.log
+coverage/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Personal progress exports
+bus-grammar-progress*.json

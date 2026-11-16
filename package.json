@@ -1,0 +1,14 @@
+{
+  "name": "bus-grammar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline grammar learning for desktop and mobile browsers",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node tools/test-web.mjs",
+    "build": "node tools/build.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
