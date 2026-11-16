@@ -57,6 +57,17 @@ For later updates, commit and push to main. GitHub runs the checks and publishes
 
 The repository is prepared locally; no GitHub remote, public repository or live deployment has been created by this setup. Publishing makes the website files, lessons and source PDF publicly accessible. Learning progress remains in each visitor's browser.
 
+## Deployment troubleshooting
+
+If configure-pages reports **Resource not accessible by integration**:
+
+1. Set **Settings → Pages → Build and deployment → Source → GitHub Actions**.
+2. Ensure the workflow is the current version: Configure Pages runs in the deploy job, which has pages: write. The build job only tests, builds and uploads the artifact.
+3. Push the workflow fix to main and start the new run. Re-running an older failed run uses its original workflow, so it will not pick up a later fix.
+4. If an organization policy restricts workflow tokens or Pages, a repository/organization administrator must allow the deployment.
+
+Automatic Pages enablement is not used: the action requires an additional token for enablement, so the normal setup uses the repository Settings page.
+
 ## Install on iPhone
 
 1. Open the deployed HTTPS address in **Safari**.

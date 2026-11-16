@@ -28,9 +28,6 @@ jobs:
         run: npm test
       - name: Build static app
         run: npm run build
-      - name: Configure Pages
-        if: github.event_name != 'pull_request'
-        uses: actions/configure-pages@v5
       - name: Upload website artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
@@ -42,12 +39,15 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
