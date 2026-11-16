@@ -1054,5 +1054,101 @@ window.B1_LESSONS = [
         "explanation": "Friday morning là một buổi của ngày cụ thể nên dùng on."
       }
     ]
+  },
+  {
+    "id": "b1-45",
+    "level": "B1",
+    "order": 45,
+    "category": "11 · B1 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Just, yet, already và still: điều gì đã xảy ra?",
+    "rule": "Just = vừa mới; already = đã rồi; yet = chưa / đã chưa; still nhấn mạnh tình trạng tiếp tục.",
+    "formula": "have/has + just/already + V3; not + V3 + yet; still + haven’t/hasn’t + V3",
+    "example": "Mai has just sent the invitation.",
+    "questions": [
+      {
+        "id": "b1-45-q1",
+        "prompt": "Have the guests arrived ____?",
+        "options": [
+          "yet",
+          "still",
+          "ever"
+        ],
+        "answer": 0,
+        "explanation": "Câu hỏi về việc đã xảy ra đến lúc này dùng yet ở cuối."
+      }
+    ]
+  },
+  {
+    "id": "b1-46",
+    "level": "B1",
+    "order": 46,
+    "category": "11 · B1 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Myself hay each other: tự mình và lẫn nhau",
+    "rule": "Đại từ phản thân chỉ hành động quay lại chủ thể; each other chỉ hành động giữa các bên.",
+    "formula": "I → myself; we → ourselves; they → themselves; by + reflexive pronoun",
+    "example": "Linh taught herself to draw.",
+    "questions": [
+      {
+        "id": "b1-46-q1",
+        "prompt": "We enjoyed ____ at the festival.",
+        "options": [
+          "ourselves",
+          "us",
+          "our"
+        ],
+        "answer": 0,
+        "explanation": "Enjoy oneself: chủ thể we tương ứng ourselves."
+      }
+    ]
+  },
+  {
+    "id": "b1-47",
+    "level": "B1",
+    "order": 47,
+    "category": "11 · B1 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Động từ + giới từ: học theo cụm có nghĩa",
+    "rule": "Một số động từ cần giới từ cụ thể; học cả cụm thay vì dịch từng từ từ tiếng Việt.",
+    "formula": "depend on; listen to; apply for; apologise to someone for something",
+    "example": "Our picnic depends on the weather.",
+    "questions": [
+      {
+        "id": "b1-47-q1",
+        "prompt": "The result depends ____ your preparation.",
+        "options": [
+          "on",
+          "at",
+          "for"
+        ],
+        "answer": 0,
+        "explanation": "Cụm đúng là depend on."
+      }
+    ]
+  },
+  {
+    "id": "b1-48",
+    "level": "B1",
+    "order": 48,
+    "category": "11 · B1 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Could, was able to, managed to: khả năng và thành công",
+    "rule": "Could thường chỉ khả năng chung trước đây; managed to nhấn mạnh thành công trong một việc khó cụ thể.",
+    "formula": "could + V; was/were able to + V; managed to + V",
+    "example": "At primary school, I could read music.",
+    "questions": [
+      {
+        "id": "b1-48-q1",
+        "prompt": "After three attempts, we managed ____ the engine.",
+        "options": [
+          "to start",
+          "starting",
+          "start"
+        ],
+        "answer": 0,
+        "explanation": "Managed to + V nhấn mạnh cuối cùng làm được."
+      }
+    ]
   }
 ];

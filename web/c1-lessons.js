@@ -622,5 +622,101 @@ window.C1_LESSONS = [
         "explanation": "To have been deleted là nguyên mẫu hoàn thành bị động, chỉ việc xóa xảy ra trước nhận định hiện tại."
       }
     ]
+  },
+  {
+    "id": "c1-27",
+    "level": "C1",
+    "order": 27,
+    "category": "11 · C1 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Reporting passives: is believed to have …",
+    "rule": "Bị động tường thuật trình bày thông tin được cho là đúng mà không nêu người đưa tin.",
+    "formula": "It is believed that … / S is believed to V / to have V3",
+    "example": "It is reported that the bridge is unsafe.",
+    "questions": [
+      {
+        "id": "c1-27-q1",
+        "prompt": "The painting is believed ____ stolen before the museum opened.",
+        "options": [
+          "to have been",
+          "to have",
+          "to being"
+        ],
+        "answer": 0,
+        "explanation": "Cần nguyên mẫu hoàn thành bị động: to have been stolen."
+      }
+    ]
+  },
+  {
+    "id": "c1-28",
+    "level": "C1",
+    "order": 28,
+    "category": "11 · C1 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Liên kết văn bản: that of, those of và do so",
+    "rule": "Dùng từ thay thế để tránh lặp nhưng phải giữ rõ đối tượng được nhắc đến và sự hòa hợp số.",
+    "formula": "that of + singular reference; those of + plural reference; do so = repeat an action",
+    "example": "The cost of rail travel exceeds that of bus travel.",
+    "questions": [
+      {
+        "id": "c1-28-q1",
+        "prompt": "Their results differ from ____ of the control group.",
+        "options": [
+          "those",
+          "that",
+          "this"
+        ],
+        "answer": 0,
+        "explanation": "Results là số nhiều, dùng those."
+      }
+    ]
+  },
+  {
+    "id": "c1-29",
+    "level": "C1",
+    "order": 29,
+    "category": "11 · C1 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Cụm danh từ chính xác: sở hữu và noun modifiers",
+    "rule": "Phân biệt sở hữu với chức năng phân loại: a student’s room là phòng của một sinh viên; a meeting room là loại phòng.",
+    "formula": "singular noun + ’s; plural ending in s + ’; noun modifier + head noun",
+    "example": "The students’ essays are on the desk.",
+    "questions": [
+      {
+        "id": "c1-29-q1",
+        "prompt": "The ____ books are ready. (books belonging to several children)",
+        "options": [
+          "children’s",
+          "childrens’",
+          "childrens"
+        ],
+        "answer": 0,
+        "explanation": "Children đã là số nhiều; sở hữu dùng children’s."
+      }
+    ]
+  },
+  {
+    "id": "c1-30",
+    "level": "C1",
+    "order": 30,
+    "category": "11 · C1 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Phrasal verbs: tách được, không tách được và tân ngữ dài",
+    "rule": "Với phrasal verb tách được, đại từ tân ngữ đứng giữa động từ và tiểu từ; loại không tách được giữ nguyên cụm.",
+    "formula": "turn the light off / turn it off; look after her; put up with it",
+    "example": "Please turn it down before the call.",
+    "questions": [
+      {
+        "id": "c1-30-q1",
+        "prompt": "The music is too loud. Please ____.",
+        "options": [
+          "turn it down",
+          "turn down it",
+          "turn down to it"
+        ],
+        "answer": 0,
+        "explanation": "Turn down tách được; it phải ở giữa."
+      }
+    ]
   }
 ];

@@ -622,5 +622,101 @@ window.B2_LESSONS = [
         "explanation": "Be supposed to theo sau bởi động từ nguyên mẫu có to."
       }
     ]
+  },
+  {
+    "id": "b2-27",
+    "level": "B2",
+    "order": 27,
+    "category": "11 · B2 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Very tired hay absolutely exhausted?",
+    "rule": "Chọn từ chỉ mức độ phù hợp: very đi với tính từ có thang mức độ; absolutely thường đi với nghĩa cực độ hoặc tuyệt đối.",
+    "formula": "very tired; absolutely exhausted; completely finished",
+    "example": "The lecture was very interesting.",
+    "questions": [
+      {
+        "id": "b2-27-q1",
+        "prompt": "The work is ____ finished; there is nothing left to do.",
+        "options": [
+          "completely",
+          "very",
+          "a bit"
+        ],
+        "answer": 0,
+        "explanation": "Completely phù hợp với trạng thái hoàn tất."
+      }
+    ]
+  },
+  {
+    "id": "b2-28",
+    "level": "B2",
+    "order": 28,
+    "category": "11 · B2 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "So sánh chính xác: far, slightly, nearly và nowhere near",
+    "rule": "Dùng far/much cho chênh lệch lớn, slightly/a little cho chênh lệch nhỏ; as … as giữ tính từ nguyên dạng.",
+    "formula": "far + comparative; slightly + comparative; nearly as + adjective + as",
+    "example": "The new route is far shorter than the old one.",
+    "questions": [
+      {
+        "id": "b2-28-q1",
+        "prompt": "This method is ____ more reliable than the old one.",
+        "options": [
+          "much",
+          "very",
+          "many"
+        ],
+        "answer": 0,
+        "explanation": "Much bổ nghĩa cho more reliable."
+      }
+    ]
+  },
+  {
+    "id": "b2-29",
+    "level": "B2",
+    "order": 29,
+    "category": "11 · B2 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Kể chuyện quá khứ: used to và would",
+    "rule": "Used to kể thói quen hoặc trạng thái cũ; would kể hành động lặp lại trong bối cảnh quá khứ đã rõ.",
+    "formula": "used to + V; would + V (repeated action); did not use to + V",
+    "example": "I used to own a small bookshop.",
+    "questions": [
+      {
+        "id": "b2-29-q1",
+        "prompt": "Did you ____ live near the station?",
+        "options": [
+          "use to",
+          "used to",
+          "would"
+        ],
+        "answer": 0,
+        "explanation": "Did đã đánh dấu quá khứ, nên dùng use to."
+      }
+    ]
+  },
+  {
+    "id": "b2-30",
+    "level": "B2",
+    "order": 30,
+    "category": "11 · B2 — Dùng đúng trong ngữ cảnh",
+    "page": null,
+    "title": "Verb patterns: chọn -ing hay to-infinitive",
+    "rule": "Hình thức động từ thứ hai phụ thuộc động từ đầu: enjoy/avoid + V-ing; agree/decide + to V.",
+    "formula": "avoid doing; decide to do; stop doing ≠ stop to do",
+    "example": "We avoided travelling during rush hour.",
+    "questions": [
+      {
+        "id": "b2-30-q1",
+        "prompt": "They agreed ____ the costs equally.",
+        "options": [
+          "to share",
+          "sharing",
+          "share"
+        ],
+        "answer": 0,
+        "explanation": "Agree + to-infinitive."
+      }
+    ]
   }
 ];

@@ -577,42 +577,54 @@ window.B1_THEORY = {
     "pages": [],
     "sections": [
       {
-        "title": "Quy tắc và cách sử dụng",
-        "text": "Used to mô tả thói quen hoặc trạng thái quá khứ không còn đúng; would mô tả hành động lặp lại, không dùng cho mọi trạng thái.",
+        "title": "Quy tắc trong ngữ cảnh",
+        "text": "Used to kể thói quen hoặc trạng thái cũ; would kể hành động lặp lại trong bối cảnh quá khứ đã rõ.",
         "bullets": [
-          "Công thức: used to + V(base)",
-          "Ví dụ: I used to live near the sea."
+          "used to + V; would + V (repeated action); did not use to + V"
         ],
         "table": null
       },
       {
-        "title": "Phân biệt và lưu ý",
-        "text": "Be used to + noun/V-ing nghĩa là đã quen với điều gì.",
+        "title": "Phân biệt cần nhớ",
+        "text": "Không thường dùng would để mô tả trạng thái quá khứ như own hoặc belong.",
         "bullets": [
-          "Áp dụng: Used to + động từ nguyên mẫu nói về thói quen cũ.",
-          "Tự tạo thêm một câu gắn với tình huống hằng ngày của bạn."
+          "Past simple vẫn dùng được cho thói quen; nó không tự nhấn mạnh rằng hiện tại đã khác."
         ],
         "table": null
       }
     ],
     "examples": [
       [
-        "I used to live near the sea.",
-        "Ví dụ minh họa cấu trúc chính."
+        "I used to own a small bookshop.",
+        "Trước đây tôi từng sở hữu một hiệu sách nhỏ."
       ],
       [
-        "I used to play football every weekend when I was younger.",
-        "Used to + động từ nguyên mẫu nói về thói quen cũ."
+        "During those summers, we would cycle to the lake.",
+        "Trong những mùa hè ấy, chúng tôi thường đạp xe ra hồ."
+      ],
+      [
+        "One evening, we cycled home in the rain.",
+        "Một tối nọ, chúng tôi đạp xe về trong mưa: một lần cụ thể."
       ]
     ],
     "mistakes": [
       [
-        "I am used to play football every weekend when I was younger.",
-        "I used to play football every weekend when I was younger.",
-        "Used to + động từ nguyên mẫu nói về thói quen cũ."
+        "Did you used to walk to work?",
+        "Did you use to walk to work?",
+        "Sau did dùng use, không phải used."
       ]
     ],
-    "check": "Bạn có thể giải thích vì sao đáp án đúng trong câu “I used to play football every weekend when I was younger.” là “used to” không?"
+    "check": "Bạn có thể giải thích vì sao đáp án đúng trong câu “I used to play football every weekend when I was younger.” là “used to” không?",
+    "sources": [
+      {
+        "title": "Past habits: used to, would and the past simple",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2-grammar/past-habits-used-to-would-past-simple",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; ví dụ và câu hỏi biên soạn độc lập."
+      }
+    ],
+    "reviewed": "2026-11-16"
   },
   "b1-16": {
     "pages": [],
@@ -741,42 +753,54 @@ window.B1_THEORY = {
     "pages": [],
     "sections": [
       {
-        "title": "Quy tắc và cách sử dụng",
-        "text": "Can nói khả năng hiện tại; could nói khả năng chung trong quá khứ hoặc lời yêu cầu lịch sự; be able to linh hoạt theo thì.",
+        "title": "Quy tắc trong ngữ cảnh",
+        "text": "Could thường chỉ khả năng chung trước đây; managed to nhấn mạnh thành công trong một việc khó cụ thể.",
         "bullets": [
-          "Công thức: can/could + V(base); be able to + V",
-          "Ví dụ: She can speak two languages."
+          "could + V; was/were able to + V; managed to + V"
         ],
         "table": null
       },
       {
-        "title": "Phân biệt và lưu ý",
-        "text": "Could thường diễn tả khả năng chung trong quá khứ; một thành công cụ thể thường dùng managed to/was able to.",
+        "title": "Phân biệt cần nhớ",
+        "text": "Khi kể thành công trong một lần cụ thể, thường chọn was/were able to hoặc managed to.",
         "bullets": [
-          "Áp dụng: Was able to nhấn mạnh đã thực hiện được một việc cụ thể trong quá khứ.",
-          "Tự tạo thêm một câu gắn với tình huống hằng ngày của bạn."
+          "Couldn’t, wasn’t able to và didn’t manage to đều có thể diễn tả một lần không thành công."
         ],
         "table": null
       }
     ],
     "examples": [
       [
-        "She can speak two languages.",
-        "Ví dụ minh họa cấu trúc chính."
+        "At primary school, I could read music.",
+        "Khi học tiểu học, tôi biết đọc nhạc."
       ],
       [
-        "After months of practice, he was able to swim across the lake yesterday.",
-        "Was able to nhấn mạnh đã thực hiện được một việc cụ thể trong quá khứ."
+        "Despite the jam, we managed to catch the last bus.",
+        "Dù tắc đường, chúng tôi vẫn bắt kịp chuyến xe buýt cuối."
+      ],
+      [
+        "I couldn’t unlock the door yesterday.",
+        "Hôm qua tôi không mở được khóa cửa."
       ]
     ],
     "mistakes": [
       [
-        "After months of practice, he can swim across the lake yesterday.",
-        "After months of practice, he was able to swim across the lake yesterday.",
-        "Was able to nhấn mạnh đã thực hiện được một việc cụ thể trong quá khứ."
+        "We managed catch the train.",
+        "We managed to catch the train.",
+        "Managed theo sau bởi to + động từ nguyên mẫu."
       ]
     ],
-    "check": "Bạn có thể giải thích vì sao đáp án đúng trong câu “After months of practice, he was able to swim across the lake yesterday.” là “was able to” không?"
+    "check": "Bạn có thể giải thích vì sao đáp án đúng trong câu “After months of practice, he was able to swim across the lake yesterday.” là “was able to” không?",
+    "sources": [
+      {
+        "title": "Past ability",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/past-ability",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
   },
   "b1-20": {
     "pages": [],
@@ -1684,42 +1708,54 @@ window.B1_THEORY = {
     "pages": [],
     "sections": [
       {
-        "title": "Quy tắc và cách sử dụng",
-        "text": "Một số phrasal verbs tách được: turn the light off / turn off the light; đại từ tân ngữ thường đứng giữa động từ và tiểu từ.",
+        "title": "Quy tắc trong ngữ cảnh",
+        "text": "Với phrasal verb tách được, đại từ tân ngữ đứng giữa động từ và tiểu từ; loại không tách được giữ nguyên cụm.",
         "bullets": [
-          "Công thức: turn + it + off; look after + somebody",
-          "Ví dụ: Please turn it off."
+          "turn the light off / turn it off; look after her; put up with it"
         ],
         "table": null
       },
       {
-        "title": "Phân biệt và lưu ý",
-        "text": "Look after là cụm không tách: look after her, không phải look her after.",
+        "title": "Phân biệt cần nhớ",
+        "text": "Danh từ dài thường đặt sau toàn bộ phrasal verb để câu dễ đọc.",
         "bullets": [
-          "Áp dụng: Với turn off và đại từ it, đặt it trước off.",
-          "Tự tạo thêm một câu gắn với tình huống hằng ngày của bạn."
+          "Không suy ra khả năng tách chỉ từ nghĩa; kiểm tra mẫu dùng của từng cụm."
         ],
         "table": null
       }
     ],
     "examples": [
       [
-        "Please turn it off.",
-        "Ví dụ minh họa cấu trúc chính."
+        "Please turn it down before the call.",
+        "It nằm giữa turn và down."
       ],
       [
-        "The music is loud. Please turn it off.",
-        "Với turn off và đại từ it, đặt it trước off."
+        "We put off the meeting about next year’s budget.",
+        "Tân ngữ dài đứng sau put off."
+      ],
+      [
+        "I cannot put up with that noise.",
+        "Put up with là cụm không tách theo cách put that noise up with."
       ]
     ],
     "mistakes": [
       [
-        "The music is loud. Please turn off it off.",
-        "The music is loud. Please turn it off.",
-        "Với turn off và đại từ it, đặt it trước off."
+        "Please turn off it.",
+        "Please turn it off.",
+        "Đại từ phải nằm giữa turn và off khi dùng cụm tách được."
       ]
     ],
-    "check": "Bạn có thể giải thích vì sao đáp án đúng trong câu “The music is loud. Please turn it off.” là “it” không?"
+    "check": "Bạn có thể giải thích vì sao đáp án đúng trong câu “The music is loud. Please turn it off.” là “it” không?",
+    "sources": [
+      {
+        "title": "Word order in phrasal verbs",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/word-order-phrasal-verbs",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; ví dụ và câu hỏi biên soạn độc lập."
+      }
+    ],
+    "reviewed": "2026-11-16"
   },
   "b1-43": {
     "pages": [],
@@ -1802,5 +1838,345 @@ window.B1_THEORY = {
       ]
     ],
     "check": "Vì sao “on” phù hợp trong câu “We have an English lesson ____ Friday morning.”?"
+  },
+  "b1-45": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Just = vừa mới; already = đã rồi; yet = chưa / đã chưa; still nhấn mạnh tình trạng tiếp tục.",
+        "bullets": [
+          "have/has + just/already + V3; not + V3 + yet; still + haven’t/hasn’t + V3"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Yet thường ở cuối câu hỏi hoặc câu phủ định.",
+        "bullets": [
+          "Still đứng trước haven’t/hasn’t khi việc mong đợi vẫn chưa xảy ra."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "Mai has just sent the invitation.",
+        "Mai vừa gửi lời mời."
+      ],
+      [
+        "Have you booked your ticket yet?",
+        "Bạn đã đặt vé chưa?"
+      ],
+      [
+        "It is noon, but Nam still hasn’t replied.",
+        "Đã trưa mà Nam vẫn chưa trả lời."
+      ]
+    ],
+    "mistakes": [
+      [
+        "I have yet finished my homework.",
+        "I haven’t finished my homework yet.",
+        "Yet trong nghĩa “chưa” đi với phủ định, thường ở cuối câu."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "b1-45-q2",
+        "prompt": "The deadline was yesterday, but she ____ sent the form.",
+        "options": [
+          "yet hasn’t",
+          "still hasn’t",
+          "hasn’t still"
+        ],
+        "answer": 1,
+        "explanation": "Still đứng trước trợ động từ phủ định để nhấn mạnh sự chậm trễ."
+      },
+      {
+        "id": "b1-45-q3",
+        "prompt": "I have ____ eaten, so I am not hungry.",
+        "options": [
+          "yet",
+          "still",
+          "already"
+        ],
+        "answer": 2,
+        "explanation": "Already cho biết việc ăn đã xong."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Present perfect: just, yet, still and already",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect-just-yet-still-already",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "b1-46": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Đại từ phản thân chỉ hành động quay lại chủ thể; each other chỉ hành động giữa các bên.",
+        "bullets": [
+          "I → myself; we → ourselves; they → themselves; by + reflexive pronoun"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "By myself có nghĩa là một mình; myself cũng dùng để nhấn mạnh chính người thực hiện.",
+        "bullets": [
+          "Không dùng myself làm chủ ngữ độc lập thay cho I."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "Linh taught herself to draw.",
+        "Linh tự học vẽ."
+      ],
+      [
+        "The two neighbours help each other.",
+        "Hai người hàng xóm giúp đỡ lẫn nhau."
+      ],
+      [
+        "I repaired the chair by myself.",
+        "Tôi tự sửa chiếc ghế, không có ai giúp."
+      ]
+    ],
+    "mistakes": [
+      [
+        "Myself wrote the email.",
+        "I wrote the email myself.",
+        "Dùng I làm chủ ngữ; myself ở đây nhấn mạnh người làm."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "b1-46-q2",
+        "prompt": "They shook hands with ____.",
+        "options": [
+          "themselves",
+          "each other",
+          "theirselves"
+        ],
+        "answer": 1,
+        "explanation": "Mỗi người bắt tay người kia, không phải chính mình."
+      },
+      {
+        "id": "b1-46-q3",
+        "prompt": "No one helped me. I did it by ____.",
+        "options": [
+          "me",
+          "my",
+          "myself"
+        ],
+        "answer": 2,
+        "explanation": "By myself diễn tả làm một mình."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Reflexive pronouns",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reflexive-pronouns",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "b1-47": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Một số động từ cần giới từ cụ thể; học cả cụm thay vì dịch từng từ từ tiếng Việt.",
+        "bullets": [
+          "depend on; listen to; apply for; apologise to someone for something"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Sau giới từ, dùng danh từ, đại từ hoặc V-ing.",
+        "bullets": [
+          "Apologise to chỉ người nhận lời xin lỗi; apologise for chỉ lý do."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "Our picnic depends on the weather.",
+        "Chuyến dã ngoại phụ thuộc vào thời tiết."
+      ],
+      [
+        "I apologised to Hoa for losing her pen.",
+        "Tôi xin lỗi Hoa vì làm mất bút của cô ấy."
+      ],
+      [
+        "He applied for a weekend job.",
+        "Anh ấy ứng tuyển một việc làm cuối tuần."
+      ]
+    ],
+    "mistakes": [
+      [
+        "Please listen me.",
+        "Please listen to me.",
+        "Listen cần to trước người hoặc điều được nghe."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "b1-47-q2",
+        "prompt": "She apologised ____ arriving late.",
+        "options": [
+          "to",
+          "for",
+          "on"
+        ],
+        "answer": 1,
+        "explanation": "Lý do đi sau for; động từ sau giới từ ở dạng V-ing."
+      },
+      {
+        "id": "b1-47-q3",
+        "prompt": "Please listen ____ the announcement.",
+        "options": [
+          "for",
+          "on",
+          "to"
+        ],
+        "answer": 2,
+        "explanation": "Listen to dùng trước điều được nghe."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Verbs and prepositions",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/verbs-prepositions",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "b1-48": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Could thường chỉ khả năng chung trước đây; managed to nhấn mạnh thành công trong một việc khó cụ thể.",
+        "bullets": [
+          "could + V; was/were able to + V; managed to + V"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Khi kể thành công trong một lần cụ thể, thường chọn was/were able to hoặc managed to.",
+        "bullets": [
+          "Couldn’t, wasn’t able to và didn’t manage to đều có thể diễn tả một lần không thành công."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "At primary school, I could read music.",
+        "Khi học tiểu học, tôi biết đọc nhạc."
+      ],
+      [
+        "Despite the jam, we managed to catch the last bus.",
+        "Dù tắc đường, chúng tôi vẫn bắt kịp chuyến xe buýt cuối."
+      ],
+      [
+        "I couldn’t unlock the door yesterday.",
+        "Hôm qua tôi không mở được khóa cửa."
+      ]
+    ],
+    "mistakes": [
+      [
+        "We managed catch the train.",
+        "We managed to catch the train.",
+        "Managed theo sau bởi to + động từ nguyên mẫu."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "b1-48-q2",
+        "prompt": "When I was six, I ____ swim well.",
+        "options": [
+          "can",
+          "could",
+          "managed"
+        ],
+        "answer": 1,
+        "explanation": "Khả năng chung trong quá khứ dùng could + V."
+      },
+      {
+        "id": "b1-48-q3",
+        "prompt": "Yesterday I ____ open the file because it was damaged.",
+        "options": [
+          "didn’t managed to",
+          "wasn’t able",
+          "couldn’t"
+        ],
+        "answer": 2,
+        "explanation": "Couldn’t + V dùng được cho một lần không làm được."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Past ability",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/past-ability",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
   }
 };

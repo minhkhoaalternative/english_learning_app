@@ -905,42 +905,54 @@ window.B2_THEORY = {
     "pages": [],
     "sections": [
       {
-        "title": "Quy tắc và ngữ cảnh",
-        "text": "V-ing và to-V đôi khi làm thay đổi ý nghĩa của remember/stop/try.",
+        "title": "Quy tắc trong ngữ cảnh",
+        "text": "Hình thức động từ thứ hai phụ thuộc động từ đầu: enjoy/avoid + V-ing; agree/decide + to V.",
         "bullets": [
-          "Cấu trúc: remember + V-ing / remember + to-V",
-          "Ví dụ: I remember locking the door."
+          "avoid doing; decide to do; stop doing ≠ stop to do"
         ],
         "table": null
       },
       {
-        "title": "Phân biệt và ứng dụng",
-        "text": "Remember to do là nhớ thực hiện việc sắp tới.",
+        "title": "Phân biệt cần nhớ",
+        "text": "Stop doing = ngừng hoạt động; stop to do = dừng một hoạt động khác để làm việc này.",
         "bullets": [
-          "Kiểm tra ngữ cảnh, ý nghĩa và hình thức của câu trước khi chọn đáp án.",
-          "Tự viết một ví dụ về công việc, học tập hoặc cuộc sống của bạn."
+          "Remember doing nhắc ký ức; remember to do nhắc việc cần thực hiện."
         ],
         "table": null
       }
     ],
     "examples": [
       [
-        "I remember locking the door.",
-        "Câu mẫu dùng đúng cấu trúc trong bối cảnh."
+        "We avoided travelling during rush hour.",
+        "Chúng tôi tránh đi vào giờ cao điểm."
       ],
       [
-        "Please remember to lock the door before leaving.",
-        "Remember to do là nhớ thực hiện việc sắp tới."
+        "Lan decided to take the evening class.",
+        "Lan quyết định học lớp buổi tối."
+      ],
+      [
+        "We stopped to buy some water.",
+        "Chúng tôi dừng lại để mua nước."
       ]
     ],
     "mistakes": [
       [
-        "I remember to lock the door yesterday.",
-        "I remember locking the door.",
-        "So sánh hình thức và ngữ nghĩa của hai câu. Remember to do là nhớ thực hiện việc sắp tới."
+        "He enjoys to cook.",
+        "He enjoys cooking.",
+        "Enjoy nhận V-ing, không nhận to-infinitive ngay sau nó."
       ]
     ],
-    "check": "Vì sao đáp án “to lock” phù hợp trong câu “Please remember ____ the door before leaving.”?"
+    "check": "Vì sao đáp án “to lock” phù hợp trong câu “Please remember ____ the door before leaving.”?",
+    "sources": [
+      {
+        "title": "Verb patterns: verb + infinitive or verb + -ing?",
+        "publisher": "Cambridge Dictionary · English Grammar Today",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-ing",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
   },
   "b2-24": {
     "pages": [],
@@ -1064,5 +1076,345 @@ window.B2_THEORY = {
       ]
     ],
     "check": "Vì sao “to register” phù hợp trong câu “Visitors are supposed ____ at reception before entering.”?"
+  },
+  "b2-27": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Chọn từ chỉ mức độ phù hợp: very đi với tính từ có thang mức độ; absolutely thường đi với nghĩa cực độ hoặc tuyệt đối.",
+        "bullets": [
+          "very tired; absolutely exhausted; completely finished"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Really dùng được với nhiều tính từ ở cả hai nhóm.",
+        "bullets": [
+          "Phân loại giúp chọn cách nói tự nhiên; ngữ cảnh vẫn có thể thay đổi cách hiểu."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "The lecture was very interesting.",
+        "Bài giảng rất thú vị."
+      ],
+      [
+        "After the overnight shift, Minh was absolutely exhausted.",
+        "Sau ca đêm, Minh hoàn toàn kiệt sức."
+      ],
+      [
+        "The repair work is completely finished.",
+        "Công việc sửa chữa đã hoàn tất."
+      ]
+    ],
+    "mistakes": [
+      [
+        "The work is very finished.",
+        "The work is completely finished.",
+        "Finished mang nghĩa đã hoàn tất; completely tự nhiên hơn very."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "b2-27-q2",
+        "prompt": "After walking all day, I was absolutely ____.",
+        "options": [
+          "tiring",
+          "exhausted",
+          "tire"
+        ],
+        "answer": 1,
+        "explanation": "Exhausted chỉ người kiệt sức; tiring chỉ thứ gây mệt."
+      },
+      {
+        "id": "b2-27-q3",
+        "prompt": "The lesson was very ____.",
+        "options": [
+          "interest",
+          "interestingly",
+          "interesting"
+        ],
+        "answer": 2,
+        "explanation": "Sau was cần tính từ mô tả bài học."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Adjectives: gradable and non-gradable",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/adjectives-gradable-non-gradable",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "b2-28": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Dùng far/much cho chênh lệch lớn, slightly/a little cho chênh lệch nhỏ; as … as giữ tính từ nguyên dạng.",
+        "bullets": [
+          "far + comparative; slightly + comparative; nearly as + adjective + as"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Không dùng very trực tiếp trước dạng so sánh hơn.",
+        "bullets": [
+          "The same as và similar to có giới từ khác nhau."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "The new route is far shorter than the old one.",
+        "Tuyến mới ngắn hơn nhiều so với tuyến cũ."
+      ],
+      [
+        "This bag is slightly heavier than mine.",
+        "Túi này nặng hơn túi tôi một chút."
+      ],
+      [
+        "The second draft is nearly as clear as the final version.",
+        "Bản nháp thứ hai gần rõ ràng bằng bản cuối."
+      ]
+    ],
+    "mistakes": [
+      [
+        "This laptop is very cheaper.",
+        "This laptop is much cheaper.",
+        "Much, không phải very, bổ nghĩa cho cheaper."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "b2-28-q2",
+        "prompt": "This room is almost as ____ as the other one.",
+        "options": [
+          "larger",
+          "large",
+          "largest"
+        ],
+        "answer": 1,
+        "explanation": "Giữa as … as dùng tính từ nguyên dạng."
+      },
+      {
+        "id": "b2-28-q3",
+        "prompt": "The pattern is the same ____ the original.",
+        "options": [
+          "to",
+          "than",
+          "as"
+        ],
+        "answer": 2,
+        "explanation": "Cụm cố định: the same as."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Modifying comparatives",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/modifying-comparatives",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "b2-29": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Used to kể thói quen hoặc trạng thái cũ; would kể hành động lặp lại trong bối cảnh quá khứ đã rõ.",
+        "bullets": [
+          "used to + V; would + V (repeated action); did not use to + V"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Không thường dùng would để mô tả trạng thái quá khứ như own hoặc belong.",
+        "bullets": [
+          "Past simple vẫn dùng được cho thói quen; nó không tự nhấn mạnh rằng hiện tại đã khác."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "I used to own a small bookshop.",
+        "Trước đây tôi từng sở hữu một hiệu sách nhỏ."
+      ],
+      [
+        "During those summers, we would cycle to the lake.",
+        "Trong những mùa hè ấy, chúng tôi thường đạp xe ra hồ."
+      ],
+      [
+        "One evening, we cycled home in the rain.",
+        "Một tối nọ, chúng tôi đạp xe về trong mưa: một lần cụ thể."
+      ]
+    ],
+    "mistakes": [
+      [
+        "Did you used to walk to work?",
+        "Did you use to walk to work?",
+        "Sau did dùng use, không phải used."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "b2-29-q2",
+        "prompt": "Back then, we would ____ cards every Friday.",
+        "options": [
+          "played",
+          "play",
+          "playing"
+        ],
+        "answer": 1,
+        "explanation": "Would + nguyên mẫu diễn tả hành động lặp lại."
+      },
+      {
+        "id": "b2-29-q3",
+        "prompt": "She ____ own a bakery, but she sold it.",
+        "options": [
+          "would to",
+          "was used to",
+          "used to"
+        ],
+        "answer": 2,
+        "explanation": "Own là trạng thái; used to phù hợp."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Past habits: used to, would and the past simple",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2-grammar/past-habits-used-to-would-past-simple",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "b2-30": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Hình thức động từ thứ hai phụ thuộc động từ đầu: enjoy/avoid + V-ing; agree/decide + to V.",
+        "bullets": [
+          "avoid doing; decide to do; stop doing ≠ stop to do"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Stop doing = ngừng hoạt động; stop to do = dừng một hoạt động khác để làm việc này.",
+        "bullets": [
+          "Remember doing nhắc ký ức; remember to do nhắc việc cần thực hiện."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "We avoided travelling during rush hour.",
+        "Chúng tôi tránh đi vào giờ cao điểm."
+      ],
+      [
+        "Lan decided to take the evening class.",
+        "Lan quyết định học lớp buổi tối."
+      ],
+      [
+        "We stopped to buy some water.",
+        "Chúng tôi dừng lại để mua nước."
+      ]
+    ],
+    "mistakes": [
+      [
+        "He enjoys to cook.",
+        "He enjoys cooking.",
+        "Enjoy nhận V-ing, không nhận to-infinitive ngay sau nó."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "b2-30-q2",
+        "prompt": "Please avoid ____ the same mistake.",
+        "options": [
+          "make",
+          "making",
+          "to make"
+        ],
+        "answer": 1,
+        "explanation": "Avoid + V-ing."
+      },
+      {
+        "id": "b2-30-q3",
+        "prompt": "I remembered ____ the door, so I know it is locked.",
+        "options": [
+          "to locking",
+          "lock",
+          "locking"
+        ],
+        "answer": 2,
+        "explanation": "Ký ức về việc đã làm dùng remember + V-ing."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Verb patterns: verb + infinitive or verb + -ing?",
+        "publisher": "Cambridge Dictionary · English Grammar Today",
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-ing",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
   }
 };

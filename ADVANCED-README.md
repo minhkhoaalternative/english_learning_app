@@ -1,11 +1,9 @@
-# B2/C1 Grammar + Vocabulary expansion
+# B1–C1 learning material
 
-- 24 B2 grammar lessons, 24 C1 grammar lessons, in addition to the 42 B1 and 26 original lessons.
-- Each new grammar lesson has a rule, formula, example, correction, theory and one 3-option question.
-- 120 vocabulary entries in 10 topics with meaning in Vietnamese, approximate British English IPA, part of speech, CEFR-labelled target level, example and collocation.
-- New **Từ vựng + IPA** tab: search, topic and level filters, hide/reveal meanings, pronounce using Web Speech API, save words, mark learned.
-- Vocabulary progress is stored under `busgrammar.vocabulary.v1` and does not overwrite existing grammar progress stored under `busgrammar.web.v1`.
-- CEFR assignments are instructional approximations, not authoritative Cambridge/English Profile word-level classifications. IPA broad BrE transcriptions should be verified against a pronunciation dictionary before publishing as an authoritative pronunciation resource. TTS depends on device voices.
-- Advanced lessons and vocabulary are independently created rather than extracted from the original Huy Forum PDF.
+The app contains 134 grammar lessons: 26 original Huy Forum topics, 48 B1, 30 B2 and 30 C1 lessons. There are 138 vocabulary entries across 10 topics.
 
-Run `npm run build`, `npm test`, and deploy `dist/` through existing GitHub Pages workflow.
+The November 2026 revision adds 12 referenced grammar lessons with three worked examples, a correction, a scheduled practice question and two inline answer-reveal self-checks per lesson. Inline self-checks are unscored; normal practice and saved progress keep their existing behavior. Four earlier lesson explanations were improved.
+
+Use the **Nguồn & ghi công** navigation item or the reference panel in a lesson to see its sources. See [ATTRIBUTION.md](ATTRIBUTION.md) for the complete bibliography and the limits of the level labels and source coverage. Existing learner progress IDs are preserved.
+
+Run npm test and npm run build. Start-App.cmd works without installing Node.

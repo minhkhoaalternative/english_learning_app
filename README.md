@@ -8,7 +8,9 @@ Learn English grammar in small steps, on the bus or at your desk. A responsive, 
 
 ## Features
 
-- 26 lessons and 58 theory sections across six chapters, including all 12 tense forms.
+- 134 grammar lessons: 26 original topics plus 48 B1, 30 B2 and 30 C1 lessons.
+- 12 new referenced lessons with worked examples, common mistakes and 24 extra self-checks; 138 vocabulary entries.
+- Per-lesson references and a Sources & Credits page; see [ATTRIBUTION.md](ATTRIBUTION.md).
 - Grammar tables, worked English examples, Vietnamese explanations, common mistakes and self-checks.
 - 2, 5 or 10-question sessions, with immediate feedback and no timer.
 - Saved sessions, bookmarks, reading progress, search and category filters.
@@ -90,13 +92,13 @@ After an update, refresh the app. If an older version is still displayed, wait f
     tools/Start-App.ps1          Windows local server
     tools/test-web.mjs          Content and behavior regression checks
     Start-App.cmd               One-click Windows launcher
-    ATTRIBUTION.md              Credit to Huy Forum
+    ATTRIBUTION.md              Huy Forum credit and expansion bibliography
 
 ## Content and attribution
 
-Lessons summarize the six parts of Huy Forum's 41-page grammar document. The PDF in web/grammar-source.pdf is unchanged. The 26 questions are adapted practice, not a complete transcription of every exercise. Theory includes additional examples and clarifications, such as compound predicates in simple sentences and context-dependent tense choices and collective-noun agreement.
+The first 26 lessons summarize the six parts of Huy Forum's 41-page grammar document. The PDF in web/grammar-source.pdf is unchanged. The 26 questions are adapted practice, not a complete transcription of every exercise. Theory includes additional examples and clarifications, such as compound predicates in simple sentences and context-dependent tense choices and collective-noun agreement.
 
-Credit to Huy Forum appears in the app footer, source references and app information. Attribution does not grant a license to the original material; this repository does not claim ownership of Huy Forum's document or grammar content.
+Credit to Huy Forum, British Council and Cambridge Dictionary appears in the app footer and Sources & Credits page. Referenced expansion lessons show specific links; see ATTRIBUTION.md for which lessons were checked. Attribution does not grant a license to the original material; this repository does not claim ownership of Huy Forum's document or grammar content.
 
 ## Verification
 

@@ -1064,5 +1064,345 @@ window.C1_THEORY = {
       ]
     ],
     "check": "Vì sao “to have been deleted” phù hợp trong câu “The files seem ____ before the audit; no copies remain.”?"
+  },
+  "c1-27": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Bị động tường thuật trình bày thông tin được cho là đúng mà không nêu người đưa tin.",
+        "bullets": [
+          "It is believed that … / S is believed to V / to have V3"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "To have + V3 đặt sự việc trước thời điểm tường thuật.",
+        "bullets": [
+          "To have been + V3 dùng khi sự việc trước đó cũng ở dạng bị động."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "It is reported that the bridge is unsafe.",
+        "Có thông tin cho rằng cầu không an toàn."
+      ],
+      [
+        "The bridge is believed to have been built in 1920.",
+        "Cầu được cho là đã được xây năm 1920."
+      ],
+      [
+        "The director is expected to attend the hearing.",
+        "Giám đốc được dự kiến sẽ dự phiên điều trần."
+      ]
+    ],
+    "mistakes": [
+      [
+        "The bridge is believed to has collapsed.",
+        "The bridge is believed to have collapsed.",
+        "Sau to giữ have nguyên mẫu, dù chủ ngữ số ít."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "c1-27-q2",
+        "prompt": "It is ____ that the company will merge next year.",
+        "options": [
+          "reporting",
+          "reported",
+          "report"
+        ],
+        "answer": 1,
+        "explanation": "It is reported that là bị động tường thuật."
+      },
+      {
+        "id": "c1-27-q3",
+        "prompt": "The manager is expected ____ tomorrow.",
+        "options": [
+          "arriving",
+          "arrive",
+          "to arrive"
+        ],
+        "answer": 2,
+        "explanation": "S + be expected + to V."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Advanced passives review",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/advanced-passives-review",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "c1-28": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Dùng từ thay thế để tránh lặp nhưng phải giữ rõ đối tượng được nhắc đến và sự hòa hợp số.",
+        "bullets": [
+          "that of + singular reference; those of + plural reference; do so = repeat an action"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "That of/those of thay phần danh từ tương ứng trong so sánh trang trọng.",
+        "bullets": [
+          "Do so nhắc lại một hành động; tránh dùng nếu người đọc khó xác định hành động nào."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "The cost of rail travel exceeds that of bus travel.",
+        "That thay cho the cost."
+      ],
+      [
+        "Her findings support those of the earlier study.",
+        "Those thay cho the findings, số nhiều."
+      ],
+      [
+        "Please revise the summary; if you cannot do so today, tell me.",
+        "Do so nhắc lại hành động sửa bản tóm tắt."
+      ]
+    ],
+    "mistakes": [
+      [
+        "The costs here exceed that of the other branch.",
+        "The costs here exceed those of the other branch.",
+        "Costs số nhiều cần those, không phải that."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "c1-28-q2",
+        "prompt": "The climate here is milder than ____ of the inland region.",
+        "options": [
+          "those",
+          "that",
+          "these"
+        ],
+        "answer": 1,
+        "explanation": "That thay cho danh từ số ít climate."
+      },
+      {
+        "id": "c1-28-q3",
+        "prompt": "Applicants must sign the form; those unable to ____ should contact us.",
+        "options": [
+          "do it so",
+          "doing so",
+          "do so"
+        ],
+        "answer": 2,
+        "explanation": "To do so thay cho hành động sign the form."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Avoiding repetition in a text",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/avoiding-repetition-text",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "c1-29": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Phân biệt sở hữu với chức năng phân loại: a student’s room là phòng của một sinh viên; a meeting room là loại phòng.",
+        "bullets": [
+          "singular noun + ’s; plural ending in s + ’; noun modifier + head noun"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Danh từ bổ nghĩa thường ở số ít; có ngoại lệ cố định như sports centre.",
+        "bullets": [
+          "Sở hữu cách còn dùng cho thời gian: a day’s work. Danh từ trung tâm quyết định số của cả cụm."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "The students’ essays are on the desk.",
+        "Bài luận của nhiều sinh viên; dấu nháy sau s."
+      ],
+      [
+        "We need a meeting room for six people.",
+        "Meeting mô tả chức năng của phòng."
+      ],
+      [
+        "A day’s work was lost when the file disappeared.",
+        "Một ngày làm việc bị mất khi tệp biến mất."
+      ]
+    ],
+    "mistakes": [
+      [
+        "The childrens’ books are upstairs.",
+        "The children’s books are upstairs.",
+        "Children là số nhiều không kết thúc bằng s nên thêm ’s."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "c1-29-q2",
+        "prompt": "We bought a new ____ table. (a table for the kitchen)",
+        "options": [
+          "kitchen’s",
+          "kitchen",
+          "kitchens"
+        ],
+        "answer": 1,
+        "explanation": "Kitchen làm danh từ bổ nghĩa chỉ loại bàn."
+      },
+      {
+        "id": "c1-29-q3",
+        "prompt": "The students’ essays ____ on my desk.",
+        "options": [
+          "is",
+          "has",
+          "are"
+        ],
+        "answer": 2,
+        "explanation": "Danh từ trung tâm essays số nhiều nên dùng are."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Possession and noun modifiers",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/possession-noun-modifiers",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  "c1-30": {
+    "pages": [],
+    "sections": [
+      {
+        "title": "Ý nghĩa trước, hình thức sau",
+        "text": "Với phrasal verb tách được, đại từ tân ngữ đứng giữa động từ và tiểu từ; loại không tách được giữ nguyên cụm.",
+        "bullets": [
+          "turn the light off / turn it off; look after her; put up with it"
+        ],
+        "table": null
+      },
+      {
+        "title": "Phân biệt để dùng chính xác",
+        "text": "Danh từ dài thường đặt sau toàn bộ phrasal verb để câu dễ đọc.",
+        "bullets": [
+          "Không suy ra khả năng tách chỉ từ nghĩa; kiểm tra mẫu dùng của từng cụm."
+        ],
+        "table": null
+      },
+      {
+        "title": "Thực hành có chủ đích",
+        "text": "Viết hai câu về tình huống của bạn. Thay chủ ngữ hoặc mốc thời gian và kiểm tra xem hình thức có cần đổi không.",
+        "bullets": [
+          "So sánh với ví dụ rồi giải thích lựa chọn bằng lời của bạn."
+        ],
+        "table": null
+      }
+    ],
+    "examples": [
+      [
+        "Please turn it down before the call.",
+        "It nằm giữa turn và down."
+      ],
+      [
+        "We put off the meeting about next year’s budget.",
+        "Tân ngữ dài đứng sau put off."
+      ],
+      [
+        "I cannot put up with that noise.",
+        "Put up with là cụm không tách theo cách put that noise up with."
+      ]
+    ],
+    "mistakes": [
+      [
+        "Please turn off it.",
+        "Please turn it off.",
+        "Đại từ phải nằm giữa turn và off khi dùng cụm tách được."
+      ]
+    ],
+    "check": "Bạn sẽ dùng cấu trúc nào để mô tả một tình huống tương tự ở công việc hoặc trường học?",
+    "selfChecks": [
+      {
+        "id": "c1-30-q2",
+        "prompt": "Who will ____ while you are away? (care for your dog)",
+        "options": [
+          "look your dog after",
+          "look after your dog",
+          "look after to your dog"
+        ],
+        "answer": 1,
+        "explanation": "Look after không tách tân ngữ vào giữa."
+      },
+      {
+        "id": "c1-30-q3",
+        "prompt": "I cannot ____ the constant interruptions. (tolerate)",
+        "options": [
+          "put them up with",
+          "put with up",
+          "put up with"
+        ],
+        "answer": 2,
+        "explanation": "Cụm ba phần put up with giữ liền trước tân ngữ."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Word order in phrasal verbs",
+        "publisher": "British Council · LearnEnglish",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/word-order-phrasal-verbs",
+        "accessed": "2026-11-16",
+        "usage": "Tham khảo quy tắc; giải thích tiếng Việt, ví dụ và câu hỏi do ứng dụng biên soạn."
+      }
+    ],
+    "reviewed": "2026-11-16"
   }
 };

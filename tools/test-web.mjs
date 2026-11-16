@@ -42,7 +42,7 @@ const KEY = 'busgrammar.web.v1';
 
 // Exercise the actual app handlers with a small DOM adapter. This is not a
 // substitute for rendering in a browser, but catches session/storage regressions.
-function boot(storage = new Map(), hash = '#home', denyStorage = false) {
+function boot(storage = new Map(), hash = '#home', denyStorage = false, extraContent = {}) {
   const elements = new Map(), windowEvents = {}, downloads = [];
   function element(selector) {
     if (!elements.has(selector)) elements.set(selector, {innerHTML:'',textContent:'',value:'',checked:false,files:[],listeners:{},dataset:{},classList:{add(){},remove(){},toggle(){}},addEventListener(name,callback){this.listeners[name]=callback;},focus(){},click(){downloads.push(this);},setAttribute(){},removeAttribute(){}});
@@ -53,6 +53,7 @@ function boot(storage = new Map(), hash = '#home', denyStorage = false) {
   Object.defineProperty(location,'hash',{get:()=>hash,set:value=>{hash=value.startsWith('#')?value:'#'+value;windowEvents.hashchange?.();}});
   const localStorage = {getItem:key=>{if(denyStorage)throw Error('denied');return storage.get(key)||null;},setItem:(key,value)=>{if(denyStorage)throw Error('denied');storage.set(key,value);}};
   const context = {window:null,document:{querySelector:element,querySelectorAll:()=>[],getElementById:()=>({scrollIntoView(){}}),createElement:()=>({click(){},href:'',download:''})},location,localStorage,navigator:{},console,Blob,URL,setTimeout:()=>0,clearTimeout(){},confirm:()=>true,GRAMMAR_LESSONS:lessons,GRAMMAR_THEORY:theory,addEventListener:(name,callback)=>{windowEvents[name]=callback;},scrollTo(){}};
+  Object.assign(context, extraContent);
   context.window=context;
   vm.runInNewContext(source, context);
   return {
@@ -171,5 +172,38 @@ for(const icon of manifest.icons)await fs.access(new URL(icon.src,base));
 const originalPDF = await fs.readFile(new URL('grammar-source.pdf',base));
 assert.equal(createHash('sha256').update(originalPDF).digest('hex'), 'a8c5d2c898c3c5dd271dd9e8ac98f673e55da2d567f8076c86b3a5132ca92113');
 assert.equal([...originalPDF.toString('latin1').matchAll(/\/Type \/Page\b/g)].length, 41);
-assert.ok((await fs.readFile(new URL('index.html',base),'utf8')).includes('Nguồn tài liệu: Huy Forum.'));
+assert.ok((await fs.readFile(new URL('index.html',base),'utf8')).includes('Huy Forum · British Council · Cambridge Dictionary.'));
 console.log('PASS: all 26 theory topics and 58 sections, chapter navigation, practice, duplicate-answer guard, persisted resume, review scheduling, bookmarks, read progress, search/filter, corrupt storage recovery, storage denial, offline theory/app/PDF, icons and original PDF identity.');
+
+// Full-content integration: referenced lesson rendering, answer reveal markup,
+// source navigation and persisted normal practice with real advanced lessons.
+const expandedContext={window:{}};
+for(const file of ['b1-lessons.js','b1-theory.js','b2-lessons.js','b2-theory.js','c1-lessons.js','c1-theory.js','vocabulary.js']) vm.runInNewContext(await fs.readFile(new URL(file,base),'utf8'),expandedContext);
+const expanded=expandedContext.window;
+const full=boot(new Map(),'#sources',false,expanded);
+assert.ok(full.app.innerHTML.includes('Cambridge'));
+assert.ok(full.app.innerHTML.includes('British Council'));
+assert.ok(full.app.innerHTML.includes('Huy Forum'));
+for(const level of ['B1','B2','C1']) {
+ for(const l of expanded[level+'_LESSONS']) {
+  full.route('lesson/'+l.id);
+  assert.ok(full.app.innerHTML.includes(l.id),l.id);
+  const t=expanded[level+'_THEORY'][l.id];
+  if(!t.sources)continue;
+  for(const r of t.sources)assert.ok(full.app.innerHTML.includes(r.url),l.id);
+  if(t.selfChecks) {
+   assert.ok(full.app.innerHTML.includes('<details>'),l.id);
+   for(const q of t.selfChecks)assert.ok(full.app.innerHTML.includes(q.explanation),q.id);
+  }
+ }
+ const l=expanded[level+'_LESSONS'].at(-1);
+ full.click('practice-one',{id:l.id});
+ assert.equal(full.state().session.ids[0],l.id);
+ const option=l.questions[0].answer;
+ full.click('answer',{value:String(option)});
+ assert.ok(full.app.innerHTML.includes('Chính xác'));
+ const restored=boot(full.storage,'#practice',false,expanded);
+ assert.ok(restored.app.innerHTML.includes('Chính xác'));
+ full.click('next');
+}
+console.log('PASS full-content app: all B1–C1 lesson routes, source credits, inline answers, practice and saved-session resume.');
