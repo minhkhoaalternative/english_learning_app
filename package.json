@@ -5,7 +5,7 @@
   "description": "Offline grammar learning for desktop and mobile browsers",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "test": "node tools/test-web.mjs",
+    "test": "node tools/test-web.mjs && node tools/test-advanced.mjs",
     "build": "node tools/build.mjs"
   },
   "engines": {

@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import vm from 'node:vm';
+const base=new URL('../web/',import.meta.url);
+const ctx={window:{}};
+for (const f of ['lessons.js','theory.js','b1-lessons.js','b1-theory.js','b2-lessons.js','b2-theory.js','c1-lessons.js','c1-theory.js','vocabulary.js']) vm.runInNewContext(await fs.readFile(new URL(f,base),'utf8'),ctx);
+const all=[...ctx.window.GRAMMAR_LESSONS,...ctx.window.B1_LESSONS,...ctx.window.B2_LESSONS,...ctx.window.C1_LESSONS];
+const details=Object.assign({},ctx.window.GRAMMAR_THEORY,ctx.window.B1_THEORY,ctx.window.B2_THEORY,ctx.window.C1_THEORY);
+assert.equal(all.length,122);
+assert.equal(new Set(all.map(l=>l.id)).size,all.length);
+for(const level of ['B2','C1']) assert.equal(all.filter(l=>l.level===level).length,26);
+for(const l of all) {
+ assert.ok(details[l.id]?.sections?.length>=2,l.id);
+ assert.equal(l.questions.length,1,l.id);
+ const q=l.questions[0];
+ if(l.level==='B2'||l.level==='C1') assert.ok(q.prompt.includes('____'),l.id);
+ assert.equal(q.options.length,3,l.id);
+ assert.ok(new Set(q.options).size===3,l.id);
+ assert.ok(q.answer>=0&&q.answer<3,l.id);
+}
+const data=ctx.window.VOCABULARY_DATA;
+assert.equal(data.words.length,138);
+assert.equal(new Set(data.words.map(w=>w.topic)).size,10);
+assert.equal(new Set(data.words.map(w=>w.id)).size,138);
+for (const w of data.words) for(const field of ['id','word','ipa','partOfSpeech','meaningVi','level','example','collocation','topic']) assert.ok(w[field],`${w.id} missing ${field}`);
+for(const w of data.words) assert.match(w.ipa,/^\/.+\/$/,w.id);
+const html=await fs.readFile(new URL('index.html',base),'utf8');
+for(const file of ['b2-lessons.js','b2-theory.js','c1-lessons.js','c1-theory.js','vocabulary.js']) assert.ok(html.includes(file));
+const sw=await fs.readFile(new URL('sw.js',base),'utf8');
+for(const file of ['b2-lessons.js','b2-theory.js','c1-lessons.js','c1-theory.js','vocabulary.js']) assert.ok(sw.includes(file));
+console.log('PASS advanced data: 122 unique lessons, 26 B2, 26 C1, 138 vocab in 10 topics, theory, IPA, offline scripts.');

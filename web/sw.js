@@ -1,5 +1,5 @@
-const CACHE = 'busgrammar-static-v3';
-const FILES = ['./', './index.html', './styles.css', './app.js', './lessons.js', './theory.js', './icon.svg', './icon-192.png', './icon-512.png', './apple-touch-icon.png', './manifest.webmanifest', './grammar-source.pdf'];
+const CACHE = 'busgrammar-static-v4';
+const FILES = ['./', './index.html', './styles.css', './app.js', './lessons.js', './theory.js', './b1-lessons.js', './b1-theory.js', './b2-lessons.js', './b2-theory.js', './c1-lessons.js', './c1-theory.js', './vocabulary.js', './icon.svg', './icon-192.png', './icon-512.png', './apple-touch-icon.png', './manifest.webmanifest', './grammar-source.pdf'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));
 });

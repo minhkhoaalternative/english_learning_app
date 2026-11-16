@@ -68,7 +68,7 @@ function boot(storage = new Map(), hash = '#home', denyStorage = false) {
 let ui=boot();
 assert.ok(ui.app.innerHTML.includes('Mỗi chuyến đi'));
 ui.route('theory');
-assert.ok(ui.app.innerHTML.includes('58 mục giải thích'));
+assert.ok(ui.app.innerHTML.includes('chủ điểm'));
 assert.ok(categoriesForTest().every(c=>ui.app.innerHTML.includes(c)));
 function categoriesForTest(){return [...new Set(lessons.map(l=>l.category))];}
 for (const l of lessons) {
