@@ -9,6 +9,7 @@ An offline-capable IELTS study app with Vietnamese grammar summaries, contextual
 - Practise 180 words and phrases across 12 IELTS topics, each with a Vietnamese meaning, part of speech, sense-aware synonyms, word forms, word patterns, collocations and an original example. Browse the paginated topic list or search any field, look up any word or phrase in Oxford, Longman, Ozdic, Thesaurus.com and Cambridge using an editable lookup field, write original sentences and schedule spaced review. The original 138-word IPA library is also preserved.
 - Choose Academic or General Training. Write six Task 2 essays, two Academic Task 1 reports, or two General Training letters using original practice prompts.
 - Plan, draft and revise with 20/40-minute timers, live word counts, four-criterion self-checks and feedback notes. Drafts save locally and can be downloaded for teacher feedback.
+- Use the free LanguageTool web checker and SKELL beside “Your own sentence”, with copy buttons for a sentence or collocation phrase. These are external copy-and-paste tools, not embedded assessment: LanguageTool’s free website has basic checks and usage limits, while SKELL is free without registration. No paid API or extension is required and text is never sent automatically.
 - Keep a mistake journal for all four skills and grammar/vocabulary.
 - Calculate an overall band from entered mock scores; study completion and draft statistics are never presented as band predictions.
 - Export/import a validated JSON backup. Original Bus Grammar data uses its existing separate storage key.

@@ -121,3 +121,7 @@ Reference checks for the learning approach and selected patterns:
 - [Cambridge: mitigate](https://dictionary.cambridge.org/dictionary/english/mitigate) and [alleviate](https://dictionary.cambridge.org/dictionary/english/alleviate) — selected near-synonym and usage checks.
 
 Reviewed 17 November 2026. The British Council and Cambridge support the cited method/patterns; they did not author or endorse the whole app bank. Full dictionary definitions and examples have not been reproduced.
+
+## Free sentence-checking tools
+
+Reviewed 17 November 2026. The vocabulary sentence section links to [LanguageTool’s website](https://languagetool.org/) for free basic checks with usage limits, and [SKELL](https://skell.sketchengine.eu/) for examples and collocations without payment or registration. See [LanguageTool’s explanation of website-only free access](https://help.languagetool.org/hc/en-us/articles/39254502438551-What-features-are-available-in-the-new-premium-only-version-of-the-LanguageTool-browser-extension) and [SKELL’s official overview](https://www.sketchengine.eu/skell/). The app provides clipboard helpers and external links, not a paid API integration or automatic band scoring. Text is shared only when the learner chooses to paste it into a third-party site. Advanced LanguageTool features and its browser extension may require payment; those are not required by this workflow. External services can change their limits.

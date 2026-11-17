@@ -41,7 +41,7 @@ function boot(initialHash='#dashboard',deny=false){
  const local={getItem:k=>{if(deny)throw Error('denied');return mem.get(k)||null;},setItem:(k,v)=>{if(deny)throw Error('denied');mem.set(k,v);}};
  const ctx={IELTS_DATA:D,IELTS_CORE:C,document:{querySelector:element,querySelectorAll:()=>[],createElement:()=>({click(){}})},location:{hash:initialHash,protocol:'file:'},localStorage:local,navigator:{},console,URL,Blob,crypto:{randomUUID:()=>String(mem.size)+'-id'},confirm:()=>true,setInterval:f=>{interval=f;return 1;},clearInterval:()=>{interval=null;},setTimeout:()=>0,Date,scrollTo(){},addEventListener(k,f){events[k]=f;}};ctx.window=ctx;
  vm.runInNewContext(appSource,ctx);
- const main=element('#main');return {nodes,main,mem,ctx,element,route(hash){ctx.location.hash='#'+hash;events.hashchange();},click(action,extra={}){main.listeners.click({target:{closest:()=>({disabled:false,dataset:{action,...extra}})}});},input(id,value){element('#'+id).value=value;main.listeners.input({target:{id,value}});},change(id,value,extra={}){main.listeners.change({target:{id,value,dataset:{},...extra}});},state(){return JSON.parse(mem.get(C.KEY));}};
+ const main=element('#main');return {nodes,main,mem,ctx,element,route(hash){ctx.location.hash='#'+hash;events.hashchange();},click(action,extra={}){return main.listeners.click({target:{closest:()=>({disabled:false,dataset:{action,...extra}})}});},input(id,value){element('#'+id).value=value;main.listeners.input({target:{id,value}});},change(id,value,extra={}){main.listeners.change({target:{id,value,dataset:{},...extra}});},state(){return JSON.parse(mem.get(C.KEY));}};
 }
 const ui=boot();assert.ok(ui.main.innerHTML.includes('Small steps.'));
 ui.route('grammar');assert.ok(ui.main.innerHTML.includes('Subject–verb agreement'));
@@ -52,6 +52,15 @@ assert.ok(ui.main.innerHTML.includes('Synonyms &amp;')||ui.main.innerHTML.includ
 assert.ok(ui.main.innerHTML.includes('Word patterns'));
 assert.ok(ui.main.innerHTML.includes('Cambridge Dictionary'));
 ui.input('sentence','Learning opens doors.');assert.equal(ui.state().sentences.v1,'Learning opens doors.');
+assert.ok(ui.main.innerHTML.includes('https://languagetool.org/'));
+assert.ok(ui.main.innerHTML.includes('https://skell.sketchengine.eu/'));
+let copied='';ui.ctx.navigator.clipboard={writeText:async text=>{copied=text;}};
+await ui.click('copy-sentence');assert.equal(copied,'Learning opens doors.');
+ui.element('#collocation-phrase').value='conduct research';await ui.click('copy-phrase');assert.equal(copied,'conduct research');
+ui.ctx.navigator.clipboard={writeText:async()=>{throw Error('Clipboard denied');}};
+await ui.click('copy-sentence');assert.ok(ui.element('#notice').textContent.includes('Text selected'));
+ui.element('#sentence').value='';await ui.click('copy-sentence');assert.ok(ui.element('#notice').textContent.includes('Write a sentence first'));
+
 ui.click('review',{id:'v1',known:'true'});assert.equal(ui.state().reviews.v1.interval,1);
 ui.change('topic','Crime & law');ui.click('choose-word',{id:D.vocabulary.find(v=>v.term==='deter').id});ui.click('reveal');assert.ok(ui.main.innerHTML.includes('Word family & related forms'));
 ui.change('topic','All');ui.input('search','hypothesise');assert.ok(ui.main.innerHTML.includes('hypothesis'));
