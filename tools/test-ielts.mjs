@@ -5,12 +5,20 @@ import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url),C=require('../web/ielts-core.js');
 const dataContext={window:{}};vm.runInNewContext(await fs.readFile(new URL('../web/ielts-data.js',import.meta.url),'utf8'),dataContext);
 const D=dataContext.window.IELTS_DATA;
-assert.equal(D.grammar.length,12);assert.equal(D.vocabulary.length,36);assert.equal(D.prompts.length,10);
+assert.equal(D.grammar.length,12);assert.equal(D.vocabulary.length,180);assert.equal(D.prompts.length,10);
 assert.equal(D.sources.filter(s=>s.kind.startsWith('Reddit')).length,4);
 const ids=new Set(D.sources.map(s=>s.id));
 for(const s of D.sources){assert.equal(new URL(s.url).protocol,'https:');for(const k of ['author','title','takeaway','application'])assert.ok(s[k]);}
 for(const g of D.grammar){assert.ok(ids.has(g.source));assert.ok(g.options.includes(g.answer));assert.ok(g.vi&&g.wrong&&g.right&&g.why);}
 for(const v of D.vocabulary)assert.ok(ids.has(v.source)&&v.collocation&&v.example&&v.vi);
+assert.equal(new Set(D.vocabulary.map(v=>v.id)).size,180);
+assert.equal(new Set(D.vocabulary.map(v=>v.term.toLowerCase())).size,180);
+assert.equal(new Set(D.vocabulary.map(v=>v.topic)).size,12);
+for(const v of D.vocabulary){
+ for(const key of ['synonyms','wordForms','patterns','collocations'])assert.ok(Array.isArray(v[key])&&v[key].length&&v[key].every(item=>typeof item==='string'&&item.length>2),v.term+' '+key);
+ assert.ok(v.pos&&v.dictionaryTerm&&v.usage);
+ assert.ok(v.wordForms.some(form=>/\((n|v|adj|adv|conjunction)/.test(form)),v.term+' labelled forms');
+}
 for(const p of D.prompts)assert.ok(p.plan&&p.focus&&p.prompt);
 assert.equal(C.countWords('  one\n two  three '),3);assert.equal(C.countWords(''),0);
 assert.equal(C.overall({Listening:7,Reading:7,Writing:6,Speaking:6}),6.5);
@@ -40,8 +48,17 @@ ui.route('grammar');assert.ok(ui.main.innerHTML.includes('Subject–verb agreeme
 ui.click('answer',{id:'agreement',option:'1'});assert.equal(ui.state().grammar.agreement.correct,false);
 ui.click('answer',{id:'agreement',option:'0'});assert.equal(ui.state().grammar.agreement.correct,true);
 ui.route('vocabulary');ui.click('reveal');assert.ok(ui.main.innerHTML.includes('cơ hội tiếp cận giáo dục'));
+assert.ok(ui.main.innerHTML.includes('Synonyms &amp;')||ui.main.innerHTML.includes('Synonyms & meaning differences'));
+assert.ok(ui.main.innerHTML.includes('Word patterns'));
+assert.ok(ui.main.innerHTML.includes('Cambridge Dictionary'));
 ui.input('sentence','Learning opens doors.');assert.equal(ui.state().sentences.v1,'Learning opens doors.');
 ui.click('review',{id:'v1',known:'true'});assert.equal(ui.state().reviews.v1.interval,1);
+ui.change('topic','Crime & law');ui.click('choose-word',{id:D.vocabulary.find(v=>v.term==='deter').id});ui.click('reveal');assert.ok(ui.main.innerHTML.includes('Word family & related forms'));
+ui.change('topic','All');ui.input('search','hypothesise');assert.ok(ui.main.innerHTML.includes('hypothesis'));
+ui.input('search','prevent someone from');assert.ok(ui.main.innerHTML.includes('prevent'));
+ui.input('search','zzzz-no-word');assert.ok(ui.main.innerHTML.includes('No cards match.'));
+ui.input('search','');ui.change('topic','Science & research');assert.ok(ui.main.innerHTML.includes('12 matches'));
+ui.change('topic','All');ui.click('vocab-page',{direction:'1'});assert.ok(ui.main.innerHTML.includes('Page 2 / 15'));
 ui.route('writing');ui.input('essay','First paragraph.\n\nSecond paragraph.');ui.input('plan','Clear position');assert.equal(ui.state().drafts.education.plan,'Clear position');
 ui.click('timer');assert.equal(ui.main.innerHTML.includes('Your response'),true);ui.click('timer');ui.click('reset-timer');assert.ok(ui.main.innerHTML.includes('40:00'));ui.click('analyse');assert.ok(ui.nodes.get('#analysis').textContent.includes('2 paragraph(s)'));
 ui.change('prompt','data');assert.ok(ui.main.innerHTML.includes('Commuting choices'));assert.ok(ui.main.innerHTML.includes('<table>'));

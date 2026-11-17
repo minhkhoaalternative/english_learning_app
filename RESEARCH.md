@@ -103,6 +103,21 @@ The app adopts practice methods, not score claims. It does not adopt claims abou
 
 ## Original teaching material and legacy credit
 
-The 12 IELTS grammar summaries, 36 phrase examples, 10 practice prompts, illustrative commuting data, checklists and flexible six-week route were written for this app. Official documents inform the test rules and assessment categories; Reddit discussions inform the study routines. These materials are not official IELTS test questions or band-certified model answers. Vocabulary items themselves are general language, and examples are original.
+The 12 IELTS grammar summaries, 180 vocabulary entries and examples, 10 practice prompts, illustrative commuting data, checklists and flexible six-week route were written for this app. Official documents inform the test rules and assessment categories; Reddit discussions inform the study routines. These materials are not official IELTS test questions or band-certified model answers. Vocabulary items themselves are general language, and examples are original.
 
 The existing grammar library, 134 lessons, 138-word bank and original Huy Forum PDF remain accessible at `web/grammar.html`. Its original credits and references are preserved in [ATTRIBUTION.md](ATTRIBUTION.md). No new licence or ownership claim is made over that material. The project is independent of IELTS and Reddit and does not imply endorsement.
+
+## Expanded vocabulary bank
+
+The new study bank contains 180 unique entries across 12 topics: Education, Environment, Technology, Health, Cities & society, Work & economy, Media & advertising, Crime & law, Travel & tourism, Science & research, Family & childhood, and Data & argument. Original IDs v1–v36 and their saved review/sentence data are retained. The separate original 138-word library is unchanged; the two libraries overlap and their counts should not be treated as a unique combined total.
+
+Each entry provides an original Vietnamese gloss, part of speech, near-synonyms with sense or register differences, word-family or related forms with grammatical labels, word patterns, multiple collocations and an original example. Words without productive derived forms are not given invented forms. These entries are teaching notes, not band-certified vocabulary or copied dictionary entries. Each card offers a Cambridge lookup link for checking meaning, usage and pronunciation; the presence of a link does not mean every detail was independently verified there.
+
+Reference checks for the learning approach and selected patterns:
+
+- [British Council: Five tips to improve your English vocabulary](https://learnenglish.britishcouncil.org/level/improve-your-english-level/five-tips-improve-your-english-vocabulary) — contextual learning and reuse.
+- [Cambridge: word patterns with prevent](https://dictionary.cambridge.org/grammar/british-grammar/word-patterns-prevent) — prevent someone from doing something.
+- [Cambridge: word patterns with depend on](https://dictionary.cambridge.org/grammar/british-grammar/word-patterns-depend-on-something) — depend on, not depend of.
+- [Cambridge: mitigate](https://dictionary.cambridge.org/dictionary/english/mitigate) and [alleviate](https://dictionary.cambridge.org/dictionary/english/alleviate) — selected near-synonym and usage checks.
+
+Reviewed 17 November 2026. The British Council and Cambridge support the cited method/patterns; they did not author or endorse the whole app bank. Full dictionary definitions and examples have not been reproduced.
