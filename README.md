@@ -1,3 +1,59 @@
+# Bus IELTS · Route to 6.5
+
+An offline-capable IELTS study app with Vietnamese grammar summaries, contextual vocabulary, timed writing practice and credited advice. The new study space opens at `web/index.html`; the original Bus Grammar library remains at `web/grammar.html`, including all 134 lessons, 138 vocabulary entries, attribution, PDF and existing progress.
+
+## What you can do
+
+- Follow a flexible six-week route with 24 saved activities and links to official four-skill samples.
+- Study 12 IELTS-focused grammar summaries, corrections and answer explanations.
+- Practise 36 topic phrases with Vietnamese meanings, collocations, speech, original sentences and self-rated spaced review.
+- Choose Academic or General Training. Write six Task 2 essays, two Academic Task 1 reports, or two General Training letters using original practice prompts.
+- Plan, draft and revise with 20/40-minute timers, live word counts, four-criterion self-checks and feedback notes. Drafts save locally and can be downloaded for teacher feedback.
+- Keep a mistake journal for all four skills and grammar/vocabulary.
+- Calculate an overall band from entered mock scores; study completion and draft statistics are never presented as band predictions.
+- Export/import a validated JSON backup. Original Bus Grammar data uses its existing separate storage key.
+- Check advice against official IELTS sources and four credited Reddit discussions.
+
+A 6.5 score cannot be guaranteed by a plan or word-count tool. Obtain qualified writing/speaking feedback, practise all four skills, and check your institution’s individual band requirements. The default test type is Academic and can be changed on My route.
+
+## Run, verify and publish
+
+Node.js 22+; no external dependencies or installation required.
+
+```sh
+npm start
+npm test
+npm run build
+```
+
+`npm start` serves the app at http://127.0.0.1:4173. `npm run build` copies all static assets into `dist/` and generates a content-based service-worker cache version. The existing workflow tests pull requests and tests/builds/deploys pushes to `main` using GitHub Pages. Set **Settings → Pages → Source → GitHub Actions** if deployment has not been enabled. The Windows `Start-App.cmd` launcher also serves the new home page.
+
+## Advice, evidence and credit
+
+See [RESEARCH.md](RESEARCH.md) for search scope, links, credited contributors, paraphrased takeaways and limitations. The app’s **Advice & credits** page makes the same source records searchable and distinguishes official rules from community anecdotes. Research reviewed 17 November 2026; the search is a curated sample, not all of Reddit. Original examples and prompts are teaching material, not official exam tasks or band-certified responses.
+
+## Storage & offline
+
+Data stays in browser local storage (`busielts.v1`). No account, backend, analytics, sync or external AI assessment is used. Export backups before changing browsers or clearing storage. Import replaces IELTS data after confirmation and rejects malformed backups. When storage is unavailable, the app keeps working in memory and offers exports, but cannot retain changes after closing.
+
+The service worker caches both the new app and original library, including the PDF. Open the app online once and let installation finish before going offline. Source links require internet; speech depends on browser voices. A new deployment refreshes the offline cache; reload to use new content. The timer uses elapsed wall time while the page is open, pauses when navigating away from the studio, and resets on reload. Drafts persist independently of the timer.
+
+## Validation
+
+`npm test` retains the original content, app and service-worker regression checks and adds IELTS content/source integrity, band rounding, review intervals, persistence/denied-storage behavior, backup validation, routes, answers, drafts, test-type selection, journal escaping and offline asset checks. Tests use DOM/cache adapters; real browser layout, Safari installation, speech and airplane-mode behavior still require device verification.
+
+## Source layout
+
+- `web/ielts-data.js`: original IELTS content and source records.
+- `web/ielts-core.js`: storage validation, word counting, score calculation and review scheduling.
+- `web/ielts.js`, `web/ielts.css`: new responsive study space.
+- `web/grammar.html`, `web/app.js`, original data scripts: preserved grammar library.
+- `tools/test-ielts.mjs`: IELTS regression checks.
+
+---
+
+## Original Bus Grammar documentation
+
 # Bus Grammar
 
 Learn English grammar in small steps, on the bus or at your desk. A responsive, offline-capable web app with Vietnamese explanations. Runs on Windows, macOS, Linux, iPhone and Android browsers.
@@ -57,7 +113,7 @@ The included workflow tests and builds the app on pull requests. Pushes to main 
 
 For later updates, commit and push to main. GitHub runs the checks and publishes the updated website. No server or custom domain is needed. See [GitHub's workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-The repository is prepared locally; no GitHub remote, public repository or live deployment has been created by this setup. Publishing makes the website files, lessons and source PDF publicly accessible. Learning progress remains in each visitor's browser.
+This repository is hosted on GitHub. Deployment is managed by the included GitHub Pages workflow. Publishing makes the website files, lessons and source PDF publicly accessible. Learning progress remains in each visitor's browser.
 
 ## Deployment troubleshooting
 

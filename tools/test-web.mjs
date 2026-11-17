@@ -172,7 +172,7 @@ for(const icon of manifest.icons)await fs.access(new URL(icon.src,base));
 const originalPDF = await fs.readFile(new URL('grammar-source.pdf',base));
 assert.equal(createHash('sha256').update(originalPDF).digest('hex'), 'a8c5d2c898c3c5dd271dd9e8ac98f673e55da2d567f8076c86b3a5132ca92113');
 assert.equal([...originalPDF.toString('latin1').matchAll(/\/Type \/Page\b/g)].length, 41);
-assert.ok((await fs.readFile(new URL('index.html',base),'utf8')).includes('Huy Forum · British Council · Cambridge Dictionary.'));
+assert.ok((await fs.readFile(new URL('grammar.html',base),'utf8')).includes('Huy Forum · British Council · Cambridge Dictionary.'));
 console.log('PASS: all 26 theory topics and 58 sections, chapter navigation, practice, duplicate-answer guard, persisted resume, review scheduling, bookmarks, read progress, search/filter, corrupt storage recovery, storage denial, offline theory/app/PDF, icons and original PDF identity.');
 
 // Full-content integration: referenced lesson rendering, answer reveal markup,

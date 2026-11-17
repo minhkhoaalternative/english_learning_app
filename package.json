@@ -2,10 +2,10 @@
   "name": "bus-grammar",
   "version": "1.0.0",
   "private": true,
-  "description": "Offline grammar learning for desktop and mobile browsers",
+  "description": "IELTS 6.5 study companion with grammar, vocabulary, writing and traceable advice",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "test": "node tools/test-web.mjs && node tools/test-advanced.mjs",
+    "test": "node tools/test-web.mjs && node tools/test-advanced.mjs && node tools/test-ielts.mjs",
     "build": "node tools/build.mjs"
   },
   "engines": {

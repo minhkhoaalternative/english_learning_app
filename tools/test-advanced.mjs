@@ -24,7 +24,7 @@ assert.equal(new Set(data.words.map(w=>w.topic)).size,10);
 assert.equal(new Set(data.words.map(w=>w.id)).size,138);
 for (const w of data.words) for(const field of ['id','word','ipa','partOfSpeech','meaningVi','level','example','collocation','topic']) assert.ok(w[field],`${w.id} missing ${field}`);
 for(const w of data.words) assert.match(w.ipa,/^\/.+\/$/,w.id);
-const html=await fs.readFile(new URL('index.html',base),'utf8');
+const html=await fs.readFile(new URL('grammar.html',base),'utf8');
 for(const file of ['b2-lessons.js','b2-theory.js','c1-lessons.js','c1-theory.js','vocabulary.js']) assert.ok(html.includes(file));
 const sw=await fs.readFile(new URL('sw.js',base),'utf8');
 for(const file of ['b2-lessons.js','b2-theory.js','c1-lessons.js','c1-theory.js','vocabulary.js']) assert.ok(sw.includes(file));

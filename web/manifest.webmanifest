@@ -1,9 +1,9 @@
 {
   "id": "./",
-  "name": "Bus Grammar",
-  "short_name": "Bus Grammar",
-  "description": "Ngữ pháp tiếng Anh cho những chuyến đi ngắn",
-  "lang": "vi",
+  "name": "Bus IELTS \u00b7 Route to 6.5",
+  "short_name": "Bus IELTS",
+  "description": "IELTS 6.5 study companion: grammar, vocabulary and timed writing",
+  "lang": "en",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
