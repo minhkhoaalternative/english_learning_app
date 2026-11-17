@@ -1,6 +1,6 @@
 # Bus IELTS · Route to 6.5
 
-An offline-capable IELTS study app with Vietnamese grammar summaries, contextual vocabulary, timed writing practice and credited advice. The new study space opens at `web/index.html`; the original Bus Grammar library remains at `web/grammar.html`, including all 134 lessons, 138 vocabulary entries, attribution, PDF and existing progress.
+An offline-capable IELTS study app with Vietnamese grammar summaries, contextual vocabulary, timed writing practice and credited advice. The new study space opens at `web/index.html`; the original Bus Grammar library remains at `web/grammar.html`, including all 134 lessons, 138 vocabulary entries, attribution and existing progress.
 
 ## What you can do
 
@@ -37,7 +37,7 @@ See [RESEARCH.md](RESEARCH.md) for search scope, links, credited contributors, p
 
 Data stays in browser local storage (`busielts.v1`). No account, backend, analytics, sync or external AI assessment is used. Export backups before changing browsers or clearing storage. Import replaces IELTS data after confirmation and rejects malformed backups. When storage is unavailable, the app keeps working in memory and offers exports, but cannot retain changes after closing.
 
-The service worker caches both the new app and original library, including the PDF. Open the app online once and let installation finish before going offline. Source links require internet; speech depends on browser voices. A new deployment refreshes the offline cache; reload to use new content. The timer uses elapsed wall time while the page is open, pauses when navigating away from the studio, and resets on reload. Drafts persist independently of the timer.
+The service worker caches both the new app and original library, without bundling the source PDF. Open the app online once and let installation finish before going offline. Source links require internet; speech depends on browser voices. A new deployment refreshes the offline cache; reload to use new content. The timer uses elapsed wall time while the page is open, pauses when navigating away from the studio, and resets on reload. Drafts persist independently of the timer.
 
 ## Validation
 
@@ -73,7 +73,7 @@ Learn English grammar in small steps, on the bus or at your desk. A responsive, 
 - Saved sessions, bookmarks, reading progress, search and category filters.
 - Spaced review: 1, 2, 4, 8, 16 and up to 30 days after correct answers; missed questions are due immediately.
 - English text-to-speech through the browser's available voices.
-- Full 41-page original PDF with page references.
+- Source attribution and historical page references; the original PDF is not bundled.
 - Local progress export/import. No accounts, analytics or backend.
 
 ## Run on Windows
@@ -114,7 +114,7 @@ The included workflow tests and builds the app on pull requests. Pushes to main 
 
 For later updates, commit and push to main. GitHub runs the checks and publishes the updated website. No server or custom domain is needed. See [GitHub's workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-This repository is hosted on GitHub. Deployment is managed by the included GitHub Pages workflow. Publishing makes the website files, lessons and source PDF publicly accessible. Learning progress remains in each visitor's browser.
+This repository is hosted on GitHub. Deployment is managed by the included GitHub Pages workflow. Publishing makes the website files and lessons publicly accessible. Learning progress remains in each visitor's browser.
 
 ## Deployment troubleshooting
 
@@ -134,7 +134,7 @@ Automatic Pages enablement is not used: the action requires an additional token 
 3. Launch the home-screen app while connected. Wait for **Sẵn sàng ngoại tuyến** before disconnecting.
 4. Learn on the bus without needing your PC, a Mac or an Apple developer account.
 
-The service worker caches the interface, theory, questions, icons and full PDF. A PC localhost address is not reachable from your iPhone. Speech may require an installed English voice for offline use.
+The service worker caches the interface, theory, questions, icons. A PC localhost address is not reachable from your iPhone. Speech may require an installed English voice for offline use.
 
 Progress is stored separately per browser and website address; it does not sync automatically. Export progress from **Tiến độ** to move between devices or keep a backup. Import replaces the current browser's progress after confirmation and closes the previous practice session. Browser storage may be cleared or evicted by the browser.
 
@@ -153,12 +153,12 @@ After an update, refresh the app. If an older version is still displayed, wait f
 
 ## Content and attribution
 
-The first 26 lessons summarize the six parts of Huy Forum's 41-page grammar document. The PDF in web/grammar-source.pdf is unchanged. The 26 questions are adapted practice, not a complete transcription of every exercise. Theory includes additional examples and clarifications, such as compound predicates in simple sentences and context-dependent tense choices and collective-noun agreement.
+The first 26 lessons summarize the six parts of Huy Forum's 41-page grammar document. The original PDF has been removed from the app; the lessons work independently. The 26 questions are adapted practice, not a complete transcription of every exercise. Theory includes additional examples and clarifications, such as compound predicates in simple sentences and context-dependent tense choices and collective-noun agreement.
 
 Credit to Huy Forum, British Council and Cambridge Dictionary appears in the app footer and Sources & Credits page. Referenced expansion lessons show specific links; see ATTRIBUTION.md for which lessons were checked. Attribution does not grant a license to the original material; this repository does not claim ownership of Huy Forum's document or grammar content.
 
 ## Verification
 
-Tests cover all 26 theory topics and 58 sections, chapter navigation, answer checking, duplicate-answer protection, saved-session resume and option order, review scheduling, bookmarks, reading progress, search/filter behavior, invalid or denied storage, offline caching and PDF byte ranges. The PDF's original SHA-256 hash and 41-page count are verified.
+Tests cover all 26 theory topics and 58 sections, chapter navigation, answer checking, duplicate-answer protection, saved-session resume and option order, review scheduling, bookmarks, reading progress, search/filter behavior, invalid or denied storage, offline caching, PDF removal and offline-readiness messages.
 
 The Windows server and static file responses have been checked locally. Tests use a DOM adapter and cache adapter. Visual rendering, actual iPhone installation, speech and airplane-mode behavior have not been verified on a real browser/device in this environment.

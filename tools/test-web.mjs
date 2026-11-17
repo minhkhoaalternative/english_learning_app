@@ -1,7 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import vm from 'node:vm';
-import { createHash } from 'node:crypto';
 import { Blob } from 'node:buffer';
 import { URL } from 'node:url';
 
@@ -146,7 +145,7 @@ assert.ok(corrupt.app.innerHTML.includes('Mỗi chuyến đi'));
 const badSession=boot(new Map([[KEY,JSON.stringify({completed:[],bookmarks:[],reviews:{},session:{ids:['missing'],position:0}})]]),'#practice');
 assert.ok(badSession.app.innerHTML.includes('chuyến học đầu tiên'));
 
-// Exercise service-worker installation and offline PDF byte ranges.
+// Exercise offline lessons, readiness messages and removal of the bundled PDF.
 const handlers={},cached=new Map();
 let claimed=false, offlineNotice=false;
 const cache={async addAll(files){for(const file of files){const path=file==='./'?'index.html':file.slice(2);cached.set(file,new ResponseAPI(await fs.readFile(new URL(path,base))));}},async match(request){const key=typeof request==='string'?request:'./'+new URL(request.url).pathname.slice(1);return cached.get(key)?.clone();}};
@@ -157,23 +156,20 @@ let pending;
 handlers.install({waitUntil:promise=>{pending=promise;}});await pending;
 handlers.activate({waitUntil:promise=>{pending=promise;}});await pending;
 assert.ok(claimed&&offlineNotice);
-assert.ok(cached.has('./app.js')&&cached.has('./grammar-source.pdf')&&cached.has('./theory.js'));
+assert.ok(cached.has('./app.js')&&cached.has('./index.html')&&cached.has('./theory.js'));
 let response;
-handlers.fetch({request:new RequestAPI('https://grammar.test/grammar-source.pdf',{headers:{range:'bytes=0-4'}}),respondWith:promise=>{response=promise;}});
-const pdf=await response;
-assert.equal(pdf.status,206);
-assert.equal(await pdf.text(),'%PDF-');
 handlers.fetch({request:new RequestAPI('https://grammar.test/app.js'),respondWith:promise=>{response=promise;}});
 assert.equal(await (await response).text(),source);
-handlers.fetch({request:new RequestAPI('https://grammar.test/grammar-source.pdf',{headers:{range:'bytes=9999999-'}}),respondWith:promise=>{response=promise;}});
-assert.equal((await response).status,416);
+assert.ok(!cached.has('./grammar-source.pdf'));
+assert.ok(!sw.includes('grammar-source.pdf'));
+await assert.rejects(fs.access(new URL('grammar-source.pdf',base)));
+let readiness=false;
+handlers.message({data:'CHECK_CACHE',source:{postMessage:message=>{readiness=message==='OFFLINE_READY';}},waitUntil:promise=>{pending=promise;}});await pending;
+assert.ok(readiness,'Readiness must use a cached app asset, not the removed PDF');
 const manifest=JSON.parse(await fs.readFile(new URL('manifest.webmanifest',base),'utf8'));
 for(const icon of manifest.icons)await fs.access(new URL(icon.src,base));
-const originalPDF = await fs.readFile(new URL('grammar-source.pdf',base));
-assert.equal(createHash('sha256').update(originalPDF).digest('hex'), 'a8c5d2c898c3c5dd271dd9e8ac98f673e55da2d567f8076c86b3a5132ca92113');
-assert.equal([...originalPDF.toString('latin1').matchAll(/\/Type \/Page\b/g)].length, 41);
 assert.ok((await fs.readFile(new URL('grammar.html',base),'utf8')).includes('Huy Forum · British Council · Cambridge Dictionary.'));
-console.log('PASS: all 26 theory topics and 58 sections, chapter navigation, practice, duplicate-answer guard, persisted resume, review scheduling, bookmarks, read progress, search/filter, corrupt storage recovery, storage denial, offline theory/app/PDF, icons and original PDF identity.');
+console.log('PASS: all 26 theory topics and 58 sections, chapter navigation, practice, duplicate-answer guard, persisted resume, review scheduling, bookmarks, read progress, search/filter, corrupt storage recovery, storage denial, offline theory/app, icons, PDF removal and offline readiness.');
 
 // Full-content integration: referenced lesson rendering, answer reveal markup,
 // source navigation and persisted normal practice with real advanced lessons.

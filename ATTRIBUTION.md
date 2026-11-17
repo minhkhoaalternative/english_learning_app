@@ -2,7 +2,7 @@
 
 ## Original Huy Forum material
 
-The original 41-page PDF and the first 26 lessons are from or adapted from **Huy Forum (THE FORUM CENTER)**. The PDF at web/grammar-source.pdf is unchanged. Rights to the original document remain with its owner; this attribution does not grant a license to redistribute it. The app is intended for learning.
+The original 41-page PDF and the first 26 lessons are from or adapted from **Huy Forum (THE FORUM CENTER)**. The original PDF is no longer bundled or cached by the app. Rights to the original document remain with its owner; this attribution does not grant a license to redistribute it. The app is intended for learning.
 
 ## Referenced grammar expansion — 16 November 2026
 

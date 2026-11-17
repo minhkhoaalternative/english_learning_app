@@ -105,7 +105,7 @@ The app adopts practice methods, not score claims. It does not adopt claims abou
 
 The 12 IELTS grammar summaries, 180 vocabulary entries and examples, 10 practice prompts, illustrative commuting data, checklists and flexible six-week route were written for this app. Official documents inform the test rules and assessment categories; Reddit discussions inform the study routines. These materials are not official IELTS test questions or band-certified model answers. Vocabulary items themselves are general language, and examples are original.
 
-The existing grammar library, 134 lessons, 138-word bank and original Huy Forum PDF remain accessible at `web/grammar.html`. Its original credits and references are preserved in [ATTRIBUTION.md](ATTRIBUTION.md). No new licence or ownership claim is made over that material. The project is independent of IELTS and Reddit and does not imply endorsement.
+The existing grammar library, 134 lessons, 138-word bank and Huy Forum attribution remain accessible at `web/grammar.html`. Its original credits and references are preserved in [ATTRIBUTION.md](ATTRIBUTION.md). No new licence or ownership claim is made over that material. The project is independent of IELTS and Reddit and does not imply endorsement.
 
 ## Expanded vocabulary bank
 
