@@ -12,7 +12,7 @@ An offline-capable IELTS study app with Vietnamese grammar summaries, contextual
 - Keep a mistake journal for all four skills and grammar/vocabulary.
 - Calculate an overall band from entered mock scores; study completion and draft statistics are never presented as band predictions.
 - Export/import a validated JSON backup. Original Bus Grammar data uses its existing separate storage key.
-- Check advice against official IELTS sources and four credited Reddit discussions.
+- Check advice against official IELTS sources and four credited Reddit discussions. The information section includes a Vietnamese banner explaining examiner criteria, task weighting and overall band calculation.
 
 A 6.5 score cannot be guaranteed by a plan or word-count tool. Obtain qualified writing/speaking feedback, practise all four skills, and check your institution’s individual band requirements. The default test type is Academic and can be changed on My route.
 
