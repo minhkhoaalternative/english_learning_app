@@ -203,3 +203,20 @@ for(const level of ['B1','B2','C1']) {
  full.click('next');
 }
 console.log('PASS full-content app: all B1–C1 lesson routes, source credits, inline answers, practice and saved-session resume.');
+
+const homeworkUI = boot(new Map(), '#homework', false, expanded);
+const homeworkBanks = {original: lessons, B1: expanded.B1_LESSONS, B2: expanded.B2_LESSONS, C1: expanded.C1_LESSONS};
+for (const [id, bank] of Object.entries(homeworkBanks)) {
+  homeworkUI.click('homework', {id});
+  const {ids} = homeworkUI.state().session;
+  assert.equal(new Set(ids).size, 10);
+  assert.ok(ids.every(lessonId => bank.some(l => l.id === lessonId)));
+}
+homeworkUI.click('homework', {id:'mixed'});
+const mixedIds = homeworkUI.state().session.ids;
+assert.equal(new Set(mixedIds).size, 10);
+for (const bank of Object.values(homeworkBanks)) {
+  assert.ok(mixedIds.filter(id => bank.some(l => l.id === id)).length >= 2);
+}
+assert.ok(boot(homeworkUI.storage, '#practice', false, expanded).app.innerHTML.includes('href="#homework"'));
+console.log('PASS homework: four source banks, balanced mixed practice and saved-session resume.');

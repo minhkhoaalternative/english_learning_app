@@ -48,13 +48,31 @@
   function toast(message) { const node = document.querySelector('#toast'); node.textContent = message; node.classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => node.classList.remove('visible'), 3500); }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { storageAvailable = false; toast('Không thể lưu dữ liệu. Giữ cửa sổ này mở để tiếp tục phiên học.'); } }
   function shuffle(values) { const result = [...values]; for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [result[i], result[j]] = [result[j], result[i]]; } return result; }
-  function start(count, reviewOnly = false, single = null) {
+  const homeworkGroups = [
+    { id: 'original', title: 'Ngữ pháp gốc · Huy Forum', lessons: window.GRAMMAR_LESSONS },
+    ...['B1', 'B2', 'C1'].map(level => ({ id: level, title: level, lessons: lessons.filter(l => l.level === level) }))
+  ];
+  function homework() {
+    return header('HOMEWORK', 'Bài tập về nhà', 'Mỗi bộ gồm 10 câu. Xem lời giải sau mỗi câu và tổng điểm cuối bài.') +
+      `<div class="actions">${homeworkGroups.filter(group => group.lessons.length).map(group =>
+        `<button class="secondary" data-action="homework" data-id="${group.id}">${group.title} · ${group.lessons.length} câu trong ngân hàng</button>`
+      ).join('')}<button class="primary" data-action="homework" data-id="mixed">Trộn cả 4 nguồn</button>
+      ${active() ? '<button class="secondary" data-action="resume">Tiếp tục phiên đang học</button>' : ''}</div>
+      <p class="notice">Bộ ngữ pháp gốc dùng câu hỏi chuyển thể từ tài liệu Huy Forum. Các bài B1, B2 và C1 dùng ngân hàng bài tập có sẵn trong ứng dụng.</p>`;
+  }
+  function start(count, reviewOnly = false, single = null, homeworkId = null) {
     if (active() && !window.confirm('Bắt đầu phiên mới sẽ thay thế phiên đang học. Tiếp tục?')) return;
     const overdue = due();
     const pool = single ? [lesson(single)] : reviewOnly ? overdue : [...overdue, ...lessons.filter(l => !state.reviews[l.id]), ...shuffle(lessons.filter(l => state.reviews[l.id] && !overdue.some(d => d.id === l.id)))];
-    const selected = pool.slice(0, count);
+    let selected = pool.slice(0, count);
+    if (homeworkId === 'mixed') {
+      const groups = shuffle(homeworkGroups).map(group => shuffle(group.lessons));
+      selected = shuffle(groups.flatMap((group, i) => group.slice(0, i < 2 ? 3 : 2)));
+    } else if (homeworkId) {
+      selected = shuffle(homeworkGroups.find(group => group.id === homeworkId)?.lessons || []).slice(0, count);
+    }
     if (!selected.length) { toast('Chưa có câu đến hạn ôn.'); return; }
-    state.session = { ids: selected.map(l => l.id), orders: selected.map(l => shuffle(l.questions[0].options.map((_, i) => i))), position: 0, selected: null, correct: 0 };
+    state.session = { ...(homeworkId ? { homework: true } : {}), ids: selected.map(l => l.id), orders: selected.map(l => shuffle(l.questions[0].options.map((_, i) => i))), position: 0, selected: null, correct: 0 };
     save(); navigate('practice');
   }
   function navigate(route) { if (location.hash === '#' + route) render(); else location.hash = route; }
@@ -113,9 +131,9 @@
   function practice() {
     const s = state.session;
     if (!s) return empty('Sẵn sàng cho chuyến học đầu tiên?', 'Chọn thời lượng ở trang Chuyến đi để bắt đầu.');
-    if (!active()) return `<div class="result"><span class="result-icon" aria-hidden="true">✳</span>${header('A LITTLE FURTHER THAN BEFORE', 'Một chuyến đi <em>có ích.</em>', `Bạn trả lời đúng <strong>${s.correct}/${s.ids.length}</strong> câu.`)}<p>${storageAvailable?'Tiến độ đã lưu trên trình duyệt này.':'Tiến độ hiện chỉ giữ trong phiên này.'}<br>Câu chưa nhớ sẽ chờ bạn ở góc ôn tập.</p><div class="actions" style="justify-content:center"><a class="primary" href="#home">Về chuyến đi →</a><a class="secondary" href="#review">Xem lịch ôn</a></div></div>`;
+    if (!active()) return `<div class="result"><span class="result-icon" aria-hidden="true">✳</span>${header('A LITTLE FURTHER THAN BEFORE', 'Một chuyến đi <em>có ích.</em>', `Bạn trả lời đúng <strong>${s.correct}/${s.ids.length}</strong> câu.`)}<p>${storageAvailable?'Tiến độ đã lưu trên trình duyệt này.':'Tiến độ hiện chỉ giữ trong phiên này.'}<br>Câu chưa nhớ sẽ chờ bạn ở góc ôn tập.</p><div class="actions" style="justify-content:center"><a class="primary" href="#${s.homework ? 'homework' : 'home'}">${s.homework ? 'Chọn bộ bài tập khác' : 'Về chuyến đi'} →</a><a class="secondary" href="#review">Xem lịch ôn</a></div></div>`;
     const l = lesson(s.ids[s.position]), q = l.questions[0], answered = s.selected !== null;
-    return `<div class="practice"><div class="practice-top"><a class="back" href="#home" style="margin:0">← Tạm dừng</a><span class="eyebrow">${e(l.category)} · CÂU ${s.position+1}/${s.ids.length}</span></div><div class="meter" role="progressbar" aria-label="Tiến độ phiên học" aria-valuenow="${s.position}" aria-valuemin="0" aria-valuemax="${s.ids.length}"><div style="width:${s.position/s.ids.length*100}%"></div></div><div class="eyebrow">CHỌN CÂU TRẢ LỜI ĐÚNG</div><h1 class="question" lang="en">${e(q.prompt)}</h1><div class="answers">${s.orders[s.position].map((index,i) => `<button class="answer ${answered && index===q.answer?'correct':''} ${answered && index===s.selected && index!==q.answer?'wrong':''}" data-action="answer" data-value="${index}" ${answered?'disabled':''}><span class="letter" aria-hidden="true">${'ABC'[i]}</span><span lang="en">${e(q.options[index])}</span>${answered && index===q.answer?'<span class="result-mark">✓ <span class="sr-only">Đáp án đúng</span></span>':answered && index===s.selected?'<span class="result-mark">× <span class="sr-only">Đáp án bạn chọn chưa đúng</span></span>':''}</button>`).join('')}</div>${answered?`<section class="feedback" role="status" aria-live="polite"><h3>${s.selected===q.answer?'✓ Chính xác. Thêm một điều đã nhớ!':'✳ Chưa đúng, nhưng mình vừa học thêm.'}</h3><p>${e(q.explanation)}</p><div class="formula">${e(l.formula)}</div><a class="text-link" href="#lesson/${l.id}">Đọc lại bài học →</a></section><button class="primary wide" data-action="next">${s.position+1===s.ids.length?'Xem kết quả':'Câu tiếp theo'} →</button>`:'<p class="notice">Không cần vội. Chạm vào một đáp án khi bạn sẵn sàng.</p>'}${l.page ? sourceLink(l.page) : ""}</div>`;
+    return `<div class="practice"><div class="practice-top"><a class="back" href="#${s.homework ? 'homework' : 'home'}" style="margin:0">← Tạm dừng</a><span class="eyebrow">${e(l.category)} · CÂU ${s.position+1}/${s.ids.length}</span></div><div class="meter" role="progressbar" aria-label="Tiến độ phiên học" aria-valuenow="${s.position}" aria-valuemin="0" aria-valuemax="${s.ids.length}"><div style="width:${s.position/s.ids.length*100}%"></div></div><div class="eyebrow">CHỌN CÂU TRẢ LỜI ĐÚNG</div><h1 class="question" lang="en">${e(q.prompt)}</h1><div class="answers">${s.orders[s.position].map((index,i) => `<button class="answer ${answered && index===q.answer?'correct':''} ${answered && index===s.selected && index!==q.answer?'wrong':''}" data-action="answer" data-value="${index}" ${answered?'disabled':''}><span class="letter" aria-hidden="true">${'ABC'[i]}</span><span lang="en">${e(q.options[index])}</span>${answered && index===q.answer?'<span class="result-mark">✓ <span class="sr-only">Đáp án đúng</span></span>':answered && index===s.selected?'<span class="result-mark">× <span class="sr-only">Đáp án bạn chọn chưa đúng</span></span>':''}</button>`).join('')}</div>${answered?`<section class="feedback" role="status" aria-live="polite"><h3>${s.selected===q.answer?'✓ Chính xác. Thêm một điều đã nhớ!':'✳ Chưa đúng, nhưng mình vừa học thêm.'}</h3><p>${e(q.explanation)}</p><div class="formula">${e(l.formula)}</div><a class="text-link" href="#lesson/${l.id}">Đọc lại bài học →</a></section><button class="primary wide" data-action="next">${s.position+1===s.ids.length?'Xem kết quả':'Câu tiếp theo'} →</button>`:'<p class="notice">Không cần vội. Chạm vào một đáp án khi bạn sẵn sàng.</p>'}${l.page ? sourceLink(l.page) : ""}</div>`;
   }
   function filteredVocab() {
     const term=vocSearch.trim().toLocaleLowerCase('vi');
@@ -137,13 +155,13 @@
   function render() {
     const [route='home', id] = location.hash.slice(1).split('/');
     if (route === 'library' && id !== undefined && categories[Number(id)]) category = categories[Number(id)];
-    const views = {home,library,sources:sourcesView,theory,vocabulary:vocabularyView,review,progress,practice,lesson:()=>lessonView(id)};
+    const views = {home,homework,library,sources:sourcesView,theory,vocabulary:vocabularyView,review,progress,practice,lesson:()=>lessonView(id)};
     app.innerHTML = (views[route] || home)();
-    const nav = route==='lesson'?'library':route==='practice'?'home':route;
+    const nav = route==='lesson'?'library':route==='practice'?(state.session?.homework?'homework':'home'):route;
     document.querySelectorAll('[data-nav]').forEach(a => { a.classList.toggle('active', a.dataset.nav===nav); if (a.dataset.nav===nav) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
     document.querySelector('#due-badge').textContent = due().length;
-    document.querySelector('#breadcrumb').textContent = 'Góc học nhỏ / '+({home:'Chuyến đi',library:'Thư viện',vocabulary:'Từ vựng',sources:'Nguồn & ghi công',theory:'Lý thuyết',lesson:'Bài học',review:'Ôn tập',progress:'Tiến độ',practice:'Luyện nhanh'}[route] || 'Chuyến đi');
-    document.title = 'Bus Grammar · '+({home:'Chuyến đi',library:'Thư viện',vocabulary:'Từ vựng',sources:'Nguồn & ghi công',theory:'Lý thuyết',lesson:lesson(id)?.title,review:'Ôn tập',progress:'Tiến độ',practice:'Luyện nhanh'}[route] || 'Chuyến đi');
+    document.querySelector('#breadcrumb').textContent = 'Góc học nhỏ / '+({home:'Chuyến đi',homework:'Bài tập về nhà',library:'Thư viện',vocabulary:'Từ vựng',sources:'Nguồn & ghi công',theory:'Lý thuyết',lesson:'Bài học',review:'Ôn tập',progress:'Tiến độ',practice:'Luyện nhanh'}[route] || 'Chuyến đi');
+    document.title = 'Bus Grammar · '+({home:'Chuyến đi',homework:'Bài tập về nhà',library:'Thư viện',vocabulary:'Từ vựng',sources:'Nguồn & ghi công',theory:'Lý thuyết',lesson:lesson(id)?.title,review:'Ôn tập',progress:'Tiến độ',practice:'Luyện nhanh'}[route] || 'Chuyến đi');
   }
   app.addEventListener('click', event => {
     const button = event.target.closest('[data-action]'); if (!button) return;
@@ -164,6 +182,7 @@
     }
     if (action==='duration') { duration=Number(value); render(); document.querySelector(`[data-action="duration"][data-value="${duration}"]`)?.focus(); }
     if (action==='start') start(duration);
+    if (action==='homework') start(10, false, null, id);
     if (action==='review') start(10, true);
     if (action==='resume') navigate('practice');
     if (action==='practice-one') start(1, false, id);
