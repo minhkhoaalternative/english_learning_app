@@ -54,10 +54,18 @@
   ];
   function homework() {
     return header('HOMEWORK', 'Bài tập về nhà', 'Mỗi bộ gồm 10 câu. Xem lời giải sau mỗi câu và tổng điểm cuối bài.') +
-      `<div class="actions">${homeworkGroups.filter(group => group.lessons.length).map(group =>
-        `<button class="secondary" data-action="homework" data-id="${group.id}">${group.title} · ${group.lessons.length} câu trong ngân hàng</button>`
-      ).join('')}<button class="primary" data-action="homework" data-id="mixed">Trộn cả 4 nguồn</button>
-      ${active() ? '<button class="secondary" data-action="resume">Tiếp tục phiên đang học</button>' : ''}</div>
+      `<section class="homework-feature">
+        <div><h2>Luyện tổng hợp</h2><p>10 câu từ B1, B2, C1 và ngữ pháp gốc.</p></div>
+        <button class="primary" data-action="homework" data-id="mixed">Bắt đầu →</button>
+      </section>
+      ${active() ? '<div class="actions"><button class="secondary" data-action="resume">Tiếp tục phiên đang học →</button></div>' : ''}
+      <h2>Chọn bộ bài tập</h2>
+      <div class="homework-grid">${homeworkGroups.filter(group => group.lessons.length).map(group =>
+        `<button class="homework-card" data-action="homework" data-id="${group.id}">
+          <strong>${group.title}</strong><span>${group.lessons.length} câu trong ngân hàng</span>
+          <span class="homework-cta">Luyện 10 câu →</span>
+        </button>`
+      ).join('')}</div>
       <p class="notice">Bộ ngữ pháp gốc dùng câu hỏi chuyển thể từ tài liệu Huy Forum. Các bài B1, B2 và C1 dùng ngân hàng bài tập có sẵn trong ứng dụng.</p>`;
   }
   function start(count, reviewOnly = false, single = null, homeworkId = null) {
